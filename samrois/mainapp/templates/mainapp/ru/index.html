@@ -23,33 +23,13 @@
 					<li>
 						<form method="post" enctype="multipart/form-data" id="form-language">
 							<div class="btn-group">
-                                {% if '/ru/' in request.path %}
-                                    <button class="btn btn-link dropdown-toggle" data-toggle="dropdown">
-                                        Язык : <span class="name"><span class="hidden-xs">Русский</span> <i class="fa fa-caret-down"></i></span>
-                                    </button>
-                                {% elif '/en/' in request.path %}
-                                    <button class="btn btn-link dropdown-toggle" data-toggle="dropdown">
-                                        Language : <span class="name"><span class="hidden-xs">English</span> <i class="fa fa-caret-down"></i></span>
-                                    </button>
-                                {% elif '/kr/' in request.path %}
-                                    <button class="btn btn-link dropdown-toggle" data-toggle="dropdown">
-                                        Language : <span class="name"><span class="hidden-xs">Korean</span> <i class="fa fa-caret-down"></i></span>
-                                    </button>
-                                {% endif %}
+                                <button class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+                                    Язык : <span class="name"><span class="hidden-xs">Русский</span> <i class="fa fa-caret-down"></i></span>
+                                </button>
 								<ul class="dropdown-menu">
-                                    {% if '/ru/' in request.path %}
-                                        <li><a href="{% url 'ru_index' %}">Русский</a></li>
-                                        <li><a href="{% url 'en_index' %}">English</a></li>
-                                        <li><a href="{% url 'kr_index' %}">Korean</a></li>
-                                    {% elif '/en/' in request.path %}
-                                        <li><a href="{% url 'en_index' %}">English</a></li>
-                                        <li><a href="{% url 'ru_index' %}">Русский</a></li>
-                                        <li><a href="{% url 'kr_index' %}">Korean</a></li>
-                                    {% elif '/kr/' in request.path %}
-                                        <li><a href="{% url 'kr_index' %}">Korean</a></li>
-                                        <li><a href="{% url 'ru_index' %}">Русский</a></li>
-                                        <li><a href="{% url 'en_index' %}">English</a></li>
-                                    {% endif %}
+                                    <li><a href="{% url 'ru_index' %}">Русский</a></li>
+                                    <li><a href="{% url 'en_index' %}">English</a></li>
+                                    <li><a href="{% url 'kr_index' %}">Korean</a></li>
 								</ul>
 							</div>
 						</form>
