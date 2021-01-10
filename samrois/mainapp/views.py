@@ -18,12 +18,10 @@ def redirect_to_index(request):
 def index(request):
 
     # CheckLanguage
-    if '/ru/' in request.path:
-        template = 'mainapp/ru/index.html'
-    elif '/en/' in request.path:
+    if '/en/' in request.path:
         template = 'mainapp/en/index.html'
-    elif '/kr/' in request.path:
-        template = 'mainapp/kr/index.html'
+    elif '/ko/' in request.path:
+        template = 'mainapp/ko/index.html'
     else:
         template = 'mainapp/ru/index.html'
     # End CheckLanguage
