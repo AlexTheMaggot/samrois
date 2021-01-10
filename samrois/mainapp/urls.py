@@ -18,9 +18,9 @@ urlpatterns = [
     path('en/', views.index, name='en_index'),
     # End EN
 
-    # KR
-    path('kr/', views.index, name='kr_index'),
-    # End KR
+    # KO
+    path('ko/', views.index, name='ko_index'),
+    # End KO
 
 ]
 # End UrlPatterns
