@@ -1,0 +1,84 @@
+<div id="top">
+		<div class="container">
+			<div id="top-links" class="nav">
+				<ul class="list-inline pull-left">
+					<li>
+                        {% if '/en/' in request.path %}
+                            <a href="{% url 'en_index' %}">Welcome to SRTour</a>
+                        {% elif '/ko/' in request.path %}
+                            <a href="{% url 'ko_index' %}">에 오신 것을 환영합니다 SRTour</a>
+                        {% else %}
+                            <a href="{% url 'ru_index' %}">Добро пожаловать в SRTour</a>
+                        {% endif %}
+					</li>
+					<li>
+						<form method="post" enctype="multipart/form-data" id="form-language">
+							{% if '/en/' in request.path %}
+                                <div class="btn-group">
+                                <button class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+                                    Language : <span class="name"><span class="hidden-xs">English</span> <i class="fa fa-caret-down"></i></span>
+                                </button>
+								<ul class="dropdown-menu">
+                                    <li><a href="{% url 'en_index' %}">English</a></li>
+                                    <li><a href="{% url 'ru_index' %}">Русский</a></li>
+                                    <li><a href="{% url 'ko_index' %}">한국어</a></li>
+								</ul>
+							</div>
+                            {% elif '/ko/' in request.path %}
+                                <div class="btn-group">
+                                <button class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+                                    혀 : <span class="name"><span class="hidden-xs">한국어</span> <i class="fa fa-caret-down"></i></span>
+                                </button>
+								<ul class="dropdown-menu">
+                                    <li><a href="{% url 'ko_index' %}">한국어</a></li>
+                                    <li><a href="{% url 'ru_index' %}">Русский</a></li>
+                                    <li><a href="{% url 'en_index' %}">English</a></li>
+								</ul>
+							</div>
+                            {% else %}
+                                <div class="btn-group">
+                                <button class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+                                    Язык : <span class="name"><span class="hidden-xs">Русский</span> <i class="fa fa-caret-down"></i></span>
+                                </button>
+								<ul class="dropdown-menu">
+                                    <li><a href="{% url 'ru_index' %}">Русский</a></li>
+                                    <li><a href="{% url 'en_index' %}">English</a></li>
+                                    <li><a href="{% url 'ko_index' %}">한국어</a></li>
+								</ul>
+							</div>
+                            {% endif %}
+						</form>
+					</li>
+                    {# Currency #}
+					{% comment %}
+                        <li>
+                            <form method="post" enctype="multipart/form-data" id="form-currency">
+                                <div class="btn-group">
+                                    <button class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+                                          Currency : <span class="name"><span class="hidden-xs"> (USD)</span> <i class="fa fa-caret-down"></i></span>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><button class="currency-select btn btn-link btn-block" type="button" name="EUR">&#8364; Euro</button></li>
+                                        <li><button class="currency-select btn btn-link btn-block" type="button" name="GBP">&#163; Pound Sterling</button></li>
+                                        <li><button class="currency-select btn btn-link btn-block" type="button" name="USD">$ US Dollar</button></li>
+                                    </ul>
+                                </div>
+                            </form>
+                        </li>
+                    {% endcomment %}
+                    {# End Currency #}
+				</ul>
+                {# LoginWishlistCart #}
+				{% comment %}
+                    <ul class="list-inline pull-right button">
+                        <li><a href="login.html">Login</a>
+                            <a href="register.html">Register</a>
+                        </li>
+                        <li><a href="my_account_wishlist.html"><i class="icon_heart"></i>Wishlist</a></li>
+                        <li><a href="shoppingcart.html"><i class="icon_cart"></i>Cart</a></li>
+                    </ul>
+                {% endcomment %}
+                {# End LoginWishlistCart #}
+			</div>
+		</div>
+	</div>
