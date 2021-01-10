@@ -1,0 +1,443 @@
+{% extends 'wrapper.html' %}
+{% load static %}
+{% block title %}SRTour - Главная{% endblock %}
+{% block content %}
+<body>
+{# Top #}
+{% include 'blocks/top.html' %}
+{# End Top #}
+{# Header #}
+{% include 'blocks/header.html' %}
+{# End Header #}
+{# Menu #}
+{% include 'blocks/menu.html' %}
+{# End Menu #}
+{# Slider #}
+<div class="slice">
+		<div class="slideshow owl-carousel">
+			<div class="item">
+				<img src="{% static 'img/slider/1.jpg' %}" alt="slider" title="slider" class="img-responsive"/>
+			</div>
+			<div class="item">
+				<img src="{% static 'img/slider/2.jpg' %}" alt="slider" title="slider" class="img-responsive"/>
+			</div>
+			<div class="item">
+				<img src="{% static 'img/slider/3.jpg' %}" alt="slider" title="slider" class="img-responsive"/>
+			</div>
+		</div>
+	</div>
+{# End Slider #}
+{# Tours #}
+<div class="placetop">
+	<div class="container">
+		<div class="row">
+			<div class="places">
+				<h1>Популярные направления</h1>
+				<p>Каждый город хранит свою историю и свою атмосферу прошлого.</p>
+				<hr>
+			</div>
+			<div class="tab-content tour">
+				<div class="tab-pane active" id="hotels">
+					<div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
+						<div class="product-thumb">
+							<div class="image">
+								<img src="{% static 'img/tour/samarkand.jpg' %}" alt="t1" title="t1" class="img-responsive" />
+								<div class="matter">
+									<p>Самарканд  <span>$575.00</span></p>
+								</div>
+							</div>
+							<div class="caption">
+								<div class="inner">
+									<h4>Самарканд</h4>
+									<div class="rate">
+										<div class="pull-left">
+											<span>HOT DEALS</span>
+										</div>
+										<div class="pull-right">
+											<i class="fa fa-star" aria-hidden="true"></i>
+											<i class="fa fa-star" aria-hidden="true"></i>
+											<i class="fa fa-star" aria-hidden="true"></i>
+											<i class="fa fa-star" aria-hidden="true"></i>
+											<i class="fa fa-star-half-o" aria-hidden="true"></i>
+										</div>
+									</div>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis elementum, dolor sit amet luctus phare-tra, turpis lacus rhoncus ipsum...</p>
+								</div>
+								<div class="text-left">
+									<button type="button" onclick="location.href='tour-booking-form.html'">Book Now <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
+									<button type="button" onclick="location.href='tour-grid-view.html'">View More <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
+								</div>
+							</div>
+						</div>
+					</div>
+                    <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
+						<div class="product-thumb">
+							<div class="image">
+								<img src="{% static 'img/tour/bukhara.jpg' %}" alt="t1" title="t1" class="img-responsive" />
+								<div class="matter">
+									<p>Бухара  <span>$575.00</span></p>
+								</div>
+							</div>
+							<div class="caption">
+								<div class="inner">
+									<h4>Бухара</h4>
+									<div class="rate">
+										<div class="pull-left">
+											<span>HOT DEALS</span>
+										</div>
+										<div class="pull-right">
+											<i class="fa fa-star" aria-hidden="true"></i>
+											<i class="fa fa-star" aria-hidden="true"></i>
+											<i class="fa fa-star" aria-hidden="true"></i>
+											<i class="fa fa-star" aria-hidden="true"></i>
+											<i class="fa fa-star-half-o" aria-hidden="true"></i>
+										</div>
+									</div>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis elementum, dolor sit amet luctus phare-tra, turpis lacus rhoncus ipsum...</p>
+								</div>
+								<div class="text-left">
+									<button type="button" onclick="location.href='tour-booking-form.html'">Book Now <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
+									<button type="button" onclick="location.href='tour-grid-view.html'">View More <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
+								</div>
+							</div>
+						</div>
+					</div>
+                    <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
+						<div class="product-thumb">
+							<div class="image">
+								<img src="{% static 'img/tour/charvak.jpg' %}" alt="t1" title="t1" class="img-responsive" />
+								<div class="matter">
+									<p>Чарвак  <span>$575.00</span></p>
+								</div>
+							</div>
+							<div class="caption">
+								<div class="inner">
+									<h4>Чарвак</h4>
+									<div class="rate">
+										<div class="pull-left">
+											<span>HOT DEALS</span>
+										</div>
+										<div class="pull-right">
+											<i class="fa fa-star" aria-hidden="true"></i>
+											<i class="fa fa-star" aria-hidden="true"></i>
+											<i class="fa fa-star" aria-hidden="true"></i>
+											<i class="fa fa-star" aria-hidden="true"></i>
+											<i class="fa fa-star-half-o" aria-hidden="true"></i>
+										</div>
+									</div>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis elementum, dolor sit amet luctus phare-tra, turpis lacus rhoncus ipsum...</p>
+								</div>
+								<div class="text-left">
+									<button type="button" onclick="location.href='tour-booking-form.html'">Book Now <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
+									<button type="button" onclick="location.href='tour-grid-view.html'">View More <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
+								</div>
+							</div>
+						</div>
+					</div>
+                    <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
+						<div class="product-thumb">
+							<div class="image">
+								<img src="{% static 'img/tour/fergana.jpg' %}" alt="t1" title="t1" class="img-responsive" />
+								<div class="matter">
+									<p>Фергана  <span>$575.00</span></p>
+								</div>
+							</div>
+							<div class="caption">
+								<div class="inner">
+									<h4>Фергана</h4>
+									<div class="rate">
+										<div class="pull-left">
+											<span>HOT DEALS</span>
+										</div>
+										<div class="pull-right">
+											<i class="fa fa-star" aria-hidden="true"></i>
+											<i class="fa fa-star" aria-hidden="true"></i>
+											<i class="fa fa-star" aria-hidden="true"></i>
+											<i class="fa fa-star" aria-hidden="true"></i>
+											<i class="fa fa-star-half-o" aria-hidden="true"></i>
+										</div>
+									</div>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis elementum, dolor sit amet luctus phare-tra, turpis lacus rhoncus ipsum...</p>
+								</div>
+								<div class="text-left">
+									<button type="button" onclick="location.href='tour-booking-form.html'">Book Now <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
+									<button type="button" onclick="location.href='tour-grid-view.html'">View More <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
+								</div>
+							</div>
+						</div>
+					</div>
+                    <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
+						<div class="product-thumb">
+							<div class="image">
+								<img src="{% static 'img/tour/khiva.jpg' %}" alt="t1" title="t1" class="img-responsive" />
+								<div class="matter">
+									<p>Хива  <span>$575.00</span></p>
+								</div>
+							</div>
+							<div class="caption">
+								<div class="inner">
+									<h4>Хива</h4>
+									<div class="rate">
+										<div class="pull-left">
+											<span>HOT DEALS</span>
+										</div>
+										<div class="pull-right">
+											<i class="fa fa-star" aria-hidden="true"></i>
+											<i class="fa fa-star" aria-hidden="true"></i>
+											<i class="fa fa-star" aria-hidden="true"></i>
+											<i class="fa fa-star" aria-hidden="true"></i>
+											<i class="fa fa-star-half-o" aria-hidden="true"></i>
+										</div>
+									</div>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis elementum, dolor sit amet luctus phare-tra, turpis lacus rhoncus ipsum...</p>
+								</div>
+								<div class="text-left">
+									<button type="button" onclick="location.href='tour-booking-form.html'">Book Now <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
+									<button type="button" onclick="location.href='tour-grid-view.html'">View More <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
+								</div>
+							</div>
+						</div>
+					</div>
+                    <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
+						<div class="product-thumb">
+							<div class="image">
+								<img src="{% static 'img/tour/muynak.jpg' %}" alt="t1" title="t1" class="img-responsive" />
+								<div class="matter">
+									<p>Муйнак  <span>$575.00</span></p>
+								</div>
+							</div>
+							<div class="caption">
+								<div class="inner">
+									<h4>Муйнак</h4>
+									<div class="rate">
+										<div class="pull-left">
+											<span>HOT DEALS</span>
+										</div>
+										<div class="pull-right">
+											<i class="fa fa-star" aria-hidden="true"></i>
+											<i class="fa fa-star" aria-hidden="true"></i>
+											<i class="fa fa-star" aria-hidden="true"></i>
+											<i class="fa fa-star" aria-hidden="true"></i>
+											<i class="fa fa-star-half-o" aria-hidden="true"></i>
+										</div>
+									</div>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis elementum, dolor sit amet luctus phare-tra, turpis lacus rhoncus ipsum...</p>
+								</div>
+								<div class="text-left">
+									<button type="button" onclick="location.href='tour-booking-form.html'">Book Now <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
+									<button type="button" onclick="location.href='tour-grid-view.html'">View More <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
+								</div>
+							</div>
+						</div>
+					</div>
+                    <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
+						<div class="product-thumb">
+							<div class="image">
+								<img src="{% static 'img/tour/nurata.jpg' %}" alt="t1" title="t1" class="img-responsive" />
+								<div class="matter">
+									<p>Нурата  <span>$575.00</span></p>
+								</div>
+							</div>
+							<div class="caption">
+								<div class="inner">
+									<h4>Нурата</h4>
+									<div class="rate">
+										<div class="pull-left">
+											<span>HOT DEALS</span>
+										</div>
+										<div class="pull-right">
+											<i class="fa fa-star" aria-hidden="true"></i>
+											<i class="fa fa-star" aria-hidden="true"></i>
+											<i class="fa fa-star" aria-hidden="true"></i>
+											<i class="fa fa-star" aria-hidden="true"></i>
+											<i class="fa fa-star-half-o" aria-hidden="true"></i>
+										</div>
+									</div>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis elementum, dolor sit amet luctus phare-tra, turpis lacus rhoncus ipsum...</p>
+								</div>
+								<div class="text-left">
+									<button type="button" onclick="location.href='tour-booking-form.html'">Book Now <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
+									<button type="button" onclick="location.href='tour-grid-view.html'">View More <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
+								</div>
+							</div>
+						</div>
+					</div>
+                    <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
+						<div class="product-thumb">
+							<div class="image">
+								<img src="{% static 'img/tour/shakhrisabz.jpg' %}" alt="t1" title="t1" class="img-responsive" />
+								<div class="matter">
+									<p>Шахрисабз  <span>$575.00</span></p>
+								</div>
+							</div>
+							<div class="caption">
+								<div class="inner">
+									<h4>Шахрисабз</h4>
+									<div class="rate">
+										<div class="pull-left">
+											<span>HOT DEALS</span>
+										</div>
+										<div class="pull-right">
+											<i class="fa fa-star" aria-hidden="true"></i>
+											<i class="fa fa-star" aria-hidden="true"></i>
+											<i class="fa fa-star" aria-hidden="true"></i>
+											<i class="fa fa-star" aria-hidden="true"></i>
+											<i class="fa fa-star-half-o" aria-hidden="true"></i>
+										</div>
+									</div>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis elementum, dolor sit amet luctus phare-tra, turpis lacus rhoncus ipsum...</p>
+								</div>
+								<div class="text-left">
+									<button type="button" onclick="location.href='tour-booking-form.html'">Book Now <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
+									<button type="button" onclick="location.href='tour-grid-view.html'">View More <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
+								</div>
+							</div>
+						</div>
+					</div>
+                    <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
+						<div class="product-thumb">
+							<div class="image">
+								<img src="{% static 'img/tour/tashkent.jpg' %}" alt="t1" title="t1" class="img-responsive" />
+								<div class="matter">
+									<p>Ташкент  <span>$575.00</span></p>
+								</div>
+							</div>
+							<div class="caption">
+								<div class="inner">
+									<h4>Ташкент</h4>
+									<div class="rate">
+										<div class="pull-left">
+											<span>HOT DEALS</span>
+										</div>
+										<div class="pull-right">
+											<i class="fa fa-star" aria-hidden="true"></i>
+											<i class="fa fa-star" aria-hidden="true"></i>
+											<i class="fa fa-star" aria-hidden="true"></i>
+											<i class="fa fa-star" aria-hidden="true"></i>
+											<i class="fa fa-star-half-o" aria-hidden="true"></i>
+										</div>
+									</div>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis elementum, dolor sit amet luctus phare-tra, turpis lacus rhoncus ipsum...</p>
+								</div>
+								<div class="text-left">
+									<button type="button" onclick="location.href='tour-booking-form.html'">Book Now <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
+									<button type="button" onclick="location.href='tour-grid-view.html'">View More <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
+								</div>
+							</div>
+						</div>
+					</div>
+                    <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                        <div class="text-center">
+                            <button class="btn-primary" type="button" onclick="location.href='#'">Все туры <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
+                        </div>
+                    </div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{# End Tours #}
+{# Video #}
+<div class="placetop">
+	<div class="container">
+		<div class="row">
+			<div class="places">
+				<h1>Видео-обзор</h1>
+				<p>Рекомендуем к просмотру, после этого видео Вы захотите посетить нашу страну.</p>
+				<hr>
+                <div class="text-center">
+                <iframe width="100%" height="400" src="https://www.youtube.com/embed/csjkd06KF2w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+			</div>
+		</div>
+	</div>
+</div>
+{# End Video #}
+{# Gallery #}
+<div class="placetop">
+	<div class="container">
+		<div class="row">
+			<div class="places">
+				<h1>Галерея </h1>
+				<p>Фотографии которые передают всю суть нашей страны</p>
+				<hr>
+			</div>
+		</div>
+	</div>
+	<div class="tab-content gallery">
+		<div class="tab-pane active" id="alls">
+			<ul class="list-inline">
+				<li>
+					<div class="product-thumb">
+						<div class="image">
+							<img src="{% static 'img/gallery/1.jpg' %}" alt="g1" title="g1" class="img-responsive" />
+						</div>
+					</div>
+				</li>
+                <li>
+					<div class="product-thumb">
+						<div class="image">
+							<img src="{% static 'img/gallery/2.jpg' %}" alt="g1" title="g1" class="img-responsive" />
+						</div>
+					</div>
+				</li>
+                <li>
+					<div class="product-thumb">
+						<div class="image">
+							<img src="{% static 'img/gallery/3.jpg' %}" alt="g1" title="g1" class="img-responsive" />
+						</div>
+					</div>
+				</li>
+                <li>
+					<div class="product-thumb">
+						<div class="image">
+							<img src="{% static 'img/gallery/4.jpg' %}" alt="g1" title="g1" class="img-responsive" />
+						</div>
+					</div>
+				</li>
+                <li>
+					<div class="product-thumb">
+						<div class="image">
+							<img src="{% static 'img/gallery/5.jpg' %}" alt="g1" title="g1" class="img-responsive" />
+						</div>
+					</div>
+				</li>
+                <li>
+					<div class="product-thumb">
+						<div class="image">
+							<img src="{% static 'img/gallery/6.jpg' %}" alt="g1" title="g1" class="img-responsive" />
+						</div>
+					</div>
+				</li>
+                <li>
+					<div class="product-thumb">
+						<div class="image">
+							<img src="{% static 'img/gallery/7.jpg' %}" alt="g1" title="g1" class="img-responsive" />
+						</div>
+					</div>
+				</li>
+                <li>
+					<div class="product-thumb">
+						<div class="image">
+							<img src="{% static 'img/gallery/8.jpg' %}" alt="g1" title="g1" class="img-responsive" />
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+
+		<div class="text-center">
+			<button class="btn-primary" type="button" onclick="location.href='#'">Все фото <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
+		</div>
+	</div>
+</div>
+{# End Gallery #}
+{# Footer #}
+{% include 'blocks/footer.html' %}
+{# End Footer #}
+{# Scripts #}
+{% include 'blocks/scripts.html' %}
+{# End Scripts #}
+
+</body>
+{% endblock %}
