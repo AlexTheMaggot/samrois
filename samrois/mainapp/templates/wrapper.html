@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+{# CheckingHtmlLang #}
+{% if '/en/' in request.path %}
+    <html lang="en-us">
+{% elif '/ko/' in request.path %}
+    <html lang="ko">
+{% else %}
+    <html lang="ru">
+{% endif %}
+{# End CheckingHtmlLang #}
+{# Head #}
+<head>
+    {# MetaTags #}
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    {# End MetaTags #}
+    {# Title #}
+    <title>{% block title %}NO ANY TITLE!{% endblock %}</title>
+    {# End Title #}
+    {# Fonts #}
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900%7CPT+Serif:400,400i,700,700i" rel="stylesheet">
+    {# End Fonts #}
+    {# Stylesheet #}
+    <link href="{% static 'css/style.css' %}" rel="stylesheet"/>
+    {# End Stylesheet #}
+</head>
+{# End Head #}
+{# Content #}
+{% block content %}
+{% endblock %}
+{# End Content #}
+</html>
