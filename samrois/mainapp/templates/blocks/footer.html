@@ -4,62 +4,114 @@
 		<div class="row padd-b">
 			<div class="col-sm-3">
 				<img src="{% static 'img/logo.png' %}" class="img-responsive" alt="foot-logo" title="foot-logo" />
-				<p class="des">Наше агентство устроит комфортные, интересные и очень познавательные туры для Вас, для ваших друзей и семьи.</p>
+				{% if '/en/' in request.path %}
+                    <p class="des">Our agency will arrange comfortable, interesting and very informative tours for you, for your friends and family.</p>
+                {% elif '/ko/' in request.path %}
+                    <p class="des">우리 에이전시는 친구와 가족을 위해 편안하고 흥미롭고 유익한 여행을 준비합니다.</p>
+                {% else %}
+                    <p class="des">Наше агентство устроит комфортные, интересные и очень познавательные туры для Вас, для ваших друзей и семьи.</p>
+                {% endif %}
 			</div>
-			<div class="col-sm-3 contact">
+            {% if '/en/' in request.path %}
+                <div class="col-sm-3 contact">
 				<h3>Contact us</h3>
 				<ul class="list-inline">
 					<li>
-						<div class="inner"><i class="fa fa-home" aria-hidden="true"></i> Address</div>
-						<div class="in"><a href="index.html#"> : 123 Lorem  ipsum dolor, Ludhiana, India</a></div>
+						<div class="inner"><i class="fa fa-home" aria-hidden="true"></i>Address</div>
+						<div class="in"> : 123 Lorem  ipsum dolor, Ludhiana, India</div>
 					</li>
 					<li>
 						<div class="inner"><i class="fa fa-phone" aria-hidden="true"></i>Phone No.</div>
-						<div class="in"><a href="index.html#"> : (+91)123457890, (1234)</a></div>
+						<div class="in"> : (+91)123457890, (1234)</div>
 					</li>
 					<li>
 						<div class="inner"><i class="fa fa-envelope" aria-hidden="true"></i>Email</div>
-						<div class="in"><a href="index.html#"> : 1234@example.com</a></div>
-						<br>
-						<div class="inner paddleft">website</div>
-						<div class="in"><a href="index.html#">  : www.Domain.com</a></div>
+						<div class="in"> : 1234@example.com</div>
 					</li>
 				</ul>
 			</div>
-			<div class="col-sm-3 info">
+                <div class="col-sm-3 info">
 				<h3>Information</h3>
 				<ul class="list-inline">
-					<li><a href="index.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Home</a></li>
-					<li><a href="login.html"><i class="fa fa-angle-right" aria-hidden="true"></i>My Account</a></li>
-					<li><a href="about.html"><i class="fa fa-angle-right" aria-hidden="true"></i>About</a></li>
-					<li><a href="packages.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Packages</a></li>
-					<li><a href="gallery.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Gallery</a></li>
-					<li><a href="tour-grid-view.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Best Tour</a></li>
-					<li><a href="hotel.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Hotels</a></li>
-					<li><a href="place.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Best Places</a></li>
-					<li><a href="blog.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Blog</a></li>
+					<li><a href="{% url 'en_index' %}"><i class="fa fa-angle-right" aria-hidden="true"></i>Home</a></li>
+					<li><a href="{% url 'en_tour_list' %}"><i class="fa fa-angle-right" aria-hidden="true"></i>Tours</a></li>
 				</ul>
 			</div>
-			<div class="col-sm-3 insta">
-				<h3>Instagram</h3>
+                <div class="col-sm-3 insta">
+				<h3>Location</h3>
+				<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A464a32ceecd3b08270c420e42e2d8acbfac7b60c681da56cc47070a47f4e21a8&amp;source=constructor" width="100%" height="200" frameborder="0"></iframe>
+			</div>
+            {% elif '/ko/' in request.path %}
+                <div class="col-sm-3 contact">
+				<h3>문의하기</h3>
 				<ul class="list-inline">
-					<li><img src="{% static 'img/ins1.jpg' %}" class="img-responsive" title="ins1" alt="ins1" /></li>
-					<li><img src="{% static 'img/ins2.jpg' %}" class="img-responsive" title="ins2" alt="ins2" /></li>
-					<li><img src="{% static 'img/ins3.jpg' %}" class="img-responsive" title="ins3" alt="ins3" /></li>
-					<li><img src="{% static 'img/ins4.jpg' %}" class="img-responsive" title="ins4" alt="ins4" /></li>
-					<li><img src="{% static 'img/ins5.jpg' %}" class="img-responsive" title="ins5" alt="ins5" /></li>
-					<li><img src="{% static 'img/ins6.jpg' %}" class="img-responsive" title="ins6" alt="ins6" /></li>
-					<li><img src="{% static 'img/ins7.jpg' %}" class="img-responsive" title="ins7" alt="ins7" /></li>
-					<li><img src="{% static 'img/ins8.jpg' %}" class="img-responsive" title="ins8" alt="ins8" /></li>
+					<li>
+						<div class="inner"><i class="fa fa-home" aria-hidden="true"></i>주소</div>
+						<div class="in"> : 123 Lorem  ipsum dolor, Ludhiana, India</div>
+					</li>
+					<li>
+						<div class="inner"><i class="fa fa-phone" aria-hidden="true"></i>전화 번호</div>
+						<div class="in"> : (+91)123457890, (1234)</div>
+					</li>
+					<li>
+						<div class="inner"><i class="fa fa-envelope" aria-hidden="true"></i>이메일</div>
+						<div class="in"> : 1234@example.com</div>
+					</li>
 				</ul>
 			</div>
+                <div class="col-sm-3 info">
+				<h3>정보</h3>
+				<ul class="list-inline">
+					<li><a href="{% url 'ko_index' %}"><i class="fa fa-angle-right" aria-hidden="true"></i>집</a></li>
+					<li><a href="{% url 'ko_tour_list' %}"><i class="fa fa-angle-right" aria-hidden="true"></i>지도</a></li>
+				</ul>
+			</div>
+                <div class="col-sm-3 insta">
+				<h3>위치</h3>
+				<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A464a32ceecd3b08270c420e42e2d8acbfac7b60c681da56cc47070a47f4e21a8&amp;source=constructor" width="100%" height="200" frameborder="0"></iframe>
+			</div>
+            {% else %}
+                <div class="col-sm-3 contact">
+				<h3>Контакты</h3>
+				<ul class="list-inline">
+					<li>
+						<div class="inner"><i class="fa fa-home" aria-hidden="true"></i>Адрес</div>
+						<div class="in"> : 123 Lorem  ipsum dolor, Ludhiana, India</div>
+					</li>
+					<li>
+						<div class="inner"><i class="fa fa-phone" aria-hidden="true"></i>Телефон</div>
+						<div class="in"> : (+91)123457890, (1234)</div>
+					</li>
+					<li>
+						<div class="inner"><i class="fa fa-envelope" aria-hidden="true"></i>Эл. Почта</div>
+						<div class="in"> : 1234@example.com</div>
+					</li>
+				</ul>
+			</div>
+                <div class="col-sm-3 info">
+				<h3>Карта сайта</h3>
+				<ul class="list-inline">
+					<li><a href="{% url 'ru_index' %}"><i class="fa fa-angle-right" aria-hidden="true"></i>Главная</a></li>
+					<li><a href="{% url 'ru_tour_list' %}"><i class="fa fa-angle-right" aria-hidden="true"></i>Направления</a></li>
+				</ul>
+			</div>
+                <div class="col-sm-3 insta">
+				<h3>Локация</h3>
+				<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A464a32ceecd3b08270c420e42e2d8acbfac7b60c681da56cc47070a47f4e21a8&amp;source=constructor" width="100%" height="200" frameborder="0"></iframe>
+			</div>
+            {% endif %}
 		</div>
-
 		<div class="row">
 			<div class="col-sm-12">
 				<div class="powered">
 					<div class="col-sm-6 padd0">
-						<p>© Copyright 2017. <span>TMD Travel Agency </span> by <a target="_blank" href="https://www.themultimediadesigner.com/">The Multimedia Designer</a> </p>
+                        {% if '/en/' in request.path %}
+                            <p>© Copyright 2021. <span>SRTour</span></p>
+                        {% elif '/ko/' in request.path %}
+                            <p>© 저작권 2021. <span>SRTour</span></p>
+                        {% else %}
+                            <p>© Все права защищены 2021. <span>SRTour</span></p>
+                        {% endif %}
 					</div>
 					<div class="col-sm-6 padd0 text-right">
 						<div class="social-icon">
