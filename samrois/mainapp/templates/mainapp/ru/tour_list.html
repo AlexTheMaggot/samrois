@@ -1,0 +1,69 @@
+{% extends 'wrapper.html' %}
+{% block title %}Все направления{% endblock %}
+{% block content %}
+<body>
+{# Top #}
+{% include 'blocks/top.html' %}
+{# End Top #}
+{# Header #}
+{% include 'blocks/header.html' %}
+{# End Header #}
+{# Menu #}
+{% include 'blocks/menu.html' %}
+{# End Menu #}
+{# Breadcumb #}
+<div class="bread-crumb">
+	<div class="container">
+		<h2>Все направления</h2>
+		<ul class="list-inline">
+			<li><a href="{% url 'ru_index' %}">Главная</a></li>
+			<li><a href="{% url 'ru_tour_list' %}">Направления</a></li>
+		</ul>
+	</div>
+</div>
+{# End Breadcumb #}
+{# MainContainer #}
+<div class="placetop">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12 mainpage">
+				<div class="row tour">
+                    {% for tour in tours %}
+                        <div class="product-layout product-grid col-lg-4 col-md-4 col-sm-6 col-xs-12">
+						<div class="product-thumb">
+							<div class="image">
+								<a href="#"><img src="{{ tour.img_list.url }}" alt="{{ tour.name_ru }}" class="img-responsive" /></a>
+								<div class="matter">
+									<p>{{ tour.name_ru }}  <span>{{ tour.price }} UZS</span></p>
+								</div>
+							</div>
+							<div class="caption">
+								<div class="inner">
+									<h4>{{ tour.name.ru }}</h4>
+                                    <div class="matter">
+										<p>{{ tour.name_ru }}  <span>{{ tour.price }} UZS</span></p>
+									</div>
+									<p>{{ tour.description_ru }}</p>
+								</div>
+								<div class="text-left">
+									<button type="button" onclick="location.href='#'">Заказть <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
+									<button type="button" onclick="location.href='#'">Узнать больше <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
+								</div>
+							</div>
+						</div>
+					</div>
+                    {% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{# End MainContainer #}
+{# Footer #}
+{% include 'blocks/footer.html' %}
+{# End Footer #}
+{# Scripts #}
+{% include 'blocks/scripts.html' %}
+{# End Scripts #}
+</body>
+{% endblock %}
