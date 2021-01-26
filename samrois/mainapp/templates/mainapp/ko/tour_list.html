@@ -14,10 +14,10 @@
 {# Breadcumb #}
 <div class="bread-crumb">
 	<div class="container">
-		<h2>Все направления</h2>
+		<h2>집</h2>
 		<ul class="list-inline">
-			<li><a href="{% url 'ru_index' %}">Главная</a></li>
-			<li><a href="{% url 'ru_tour_list' %}">Направления</a></li>
+			<li><a href="{% url 'ru_index' %}">집</a></li>
+			<li><a href="{% url 'ru_tour_list' %}">지도</a></li>
 		</ul>
 	</div>
 </div>
@@ -32,22 +32,22 @@
                         <div class="product-layout product-grid col-lg-4 col-md-4 col-sm-6 col-xs-12">
 						<div class="product-thumb">
 							<div class="image">
-								<a href="#"><img src="{{ tour.img_list.url }}" alt="{{ tour.name_ru }}" class="img-responsive" /></a>
+								<a href="#"><img src="{{ tour.img_list.url }}" alt="{{ tour.name_ko }}" class="img-responsive" /></a>
 								<div class="matter">
-									<p>{{ tour.name_ru }}  <span>{{ tour.price }} UZS</span></p>
+									<p>{{ tour.name_ko }}  <span>{{ tour.price }} UZS</span></p>
 								</div>
 							</div>
 							<div class="caption">
 								<div class="inner">
-									<h4>{{ tour.name_ru }}</h4>
+									<h4>{{ tour.name_ko }}</h4>
                                     <div class="matter">
-										<p>{{ tour.name_ru }}  <span>{{ tour.price }} UZS</span></p>
+										<p>{{ tour.name_ko }}  <span>{{ tour.price }} UZS</span></p>
 									</div>
-									<p>{{ tour.description_ru }}</p>
+									<p>{{ tour.description_ko }}</p>
 								</div>
 								<div class="text-left">
-									<button type="button" onclick="location.href='#'">Заказть <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
-									<button type="button" onclick="location.href='#'">Узнать больше <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
+									<button type="button" onclick="location.href='#'">주문하려면 <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
+									<button type="button" onclick="location.href='#'">자세히 알아보기 <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
 								</div>
 							</div>
 						</div>
