@@ -1,22 +1,23 @@
 # DjangoImports
-
-from django.shortcuts import render, redirect
-
+from django.shortcuts import render, redirect, get_object_or_404
+from .models import Slide, Tour
 # End DjangoImports
 
 
 # RedirectToIndexPage
-
 def redirect_to_index(request):
     return redirect('ru_index')
-
 # End RedirectToIndexPage
 
 
 # IndexView
-
 def index(request):
-
+    tours = Tour.objects.all()
+    slides = Slide.objects.all()
+    context = {
+        'slides': slides,
+        'tours': tours,
+    }
     # CheckLanguage
     if '/en/' in request.path:
         template = 'mainapp/en/index.html'
@@ -25,7 +26,43 @@ def index(request):
     else:
         template = 'mainapp/ru/index.html'
     # End CheckLanguage
-
-    return render(request, template)
-
+    return render(request, template, context)
 # End IndexView
+
+
+# TourListView
+def tour_list(request):
+    tours = Tour.objects.all()
+    context = {
+        'tours': tours,
+    }
+    # CheckLanguage
+    if '/en/' in request.path:
+        template = 'mainapp/en/tour_list.html'
+    elif '/ko/' in request.path:
+        template = 'mainapp/ko/tour_list.html'
+    else:
+        template = 'mainapp/ru/tour_list.html'
+    # End CheckLanguage
+    return render(request, template, context)
+# End TourListView
+
+
+# TourDetailView
+def tour_detail(request, tour_id):
+    tours = Tour.objects.filter(id__exclude=tour_id)
+    tour = get_object_or_404(Tour, id=tour_id)
+    context = {
+        'tours': tours,
+        'tour': tour,
+    }
+    # CheckLanguage
+    if '/en/' in request.path:
+        template = 'mainapp/en/tour_detail.html'
+    elif '/ko/' in request.path:
+        template = 'mainapp/ko/tour_detail.html'
+    else:
+        template = 'mainapp/ru/tour_detail.html'
+    # End CheckLanguage
+    return render(request, template, context)
+# End TourDetailView
