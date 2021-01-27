@@ -9,6 +9,7 @@
     <html lang="ru">
 {% endif %}
 {# End CheckingHtmlLang #}
+
 {# Head #}
 <head>
     {# MetaTags #}
@@ -16,19 +17,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     {# End MetaTags #}
+
     {# Title #}
     <title>{% block title %}NO ANY TITLE!{% endblock %}</title>
     {# End Title #}
+
     {# Fonts #}
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900%7CPT+Serif:400,400i,700,700i" rel="stylesheet">
     {# End Fonts #}
+
     {# Stylesheet #}
     <link href="{% static 'css/style.css' %}" rel="stylesheet"/>
     {# End Stylesheet #}
 </head>
 {# End Head #}
-{# Content #}
-{% block content %}
-{% endblock %}
-{# End Content #}
+<body>
+    {# Top #}
+    {% include 'blocks/top.html' %}
+    {# End Top #}
+
+    {# Header #}
+    {% include 'blocks/header.html' %}
+    {# End Header #}
+
+    {# Menu #}
+    {% include 'blocks/menu.html' %}
+    {# End Menu #}
+
+    {# Content #}
+    {% block content %}
+    {% endblock %}
+    {# End Content #}
+
+    {# Footer #}
+    {% include 'blocks/footer.html' %}
+    {# End Footer #}
+
+    {# Scripts #}
+    {% include 'blocks/scripts.html' %}
+    {# End Scripts #}
+</body>
 </html>

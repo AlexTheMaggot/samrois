@@ -2,172 +2,157 @@
 {% load static %}
 {% block title %}SRTour - Главная{% endblock %}
 {% block content %}
-<body>
-{# Top #}
-{% include 'blocks/top.html' %}
-{# End Top #}
-{# Header #}
-{% include 'blocks/header.html' %}
-{# End Header #}
-{# Menu #}
-{% include 'blocks/menu.html' %}
-{# End Menu #}
-{# Slider #}
-<div class="slice">
-		<div class="slideshow owl-carousel">
-			{% for slide in slides %}
-                <div class="item">
-				    <img src="{{ slide.image.url }}" alt="미끄러지 다" class="img-responsive"/>
-			    </div>
-            {% endfor %}
-		</div>
-	</div>
-{# End Slider #}
-{# Tours #}
-<div class="placetop">
-	<div class="container">
-		<div class="row">
-			<div class="places">
-				<h1>인기있는 목적지</h1>
-				<p>각 도시는 역사와 과거의 분위기를 간직하고 있습니다.</p>
-				<hr>
-			</div>
-			<div class="tab-content tour">
-				<div class="tab-pane active" id="hotels">
-                    {% for tour in tours %}
-                        <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
-                            <div class="product-thumb">
-                                <div class="image">
-                                    <img src="{{ tour.img_list.url }}" alt="{{ tour.name_ko }}" class="img-responsive" />
-                                    <div class="matter">
-                                        <p>{{ tour.name_ko }}  <span>{{ tour.price }} UZS</span></p>
+    {# Slider #}
+        <div class="slice">
+		    <div class="slideshow owl-carousel">
+			    {% for slide in slides %}
+                    <div class="item">
+                        <img src="{{ slide.image.url }}" alt="미끄러지 다" class="img-responsive"/>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    {# End Slider #}
+
+    {# Tours #}
+        <div class="placetop">
+            <div class="container">
+                <div class="row">
+                    <div class="places">
+                        <h1>인기있는 목적지</h1>
+                        <p>각 도시는 역사와 과거의 분위기를 간직하고 있습니다.</p>
+                        <hr>
+                    </div>
+                    <div class="tab-content tour">
+                        <div class="tab-pane active" id="hotels">
+                            {% for tour in tours %}
+                                <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
+                                    <div class="product-thumb">
+                                        <div class="image">
+                                            <img src="{{ tour.img_list.url }}" alt="{{ tour.name_ko }}" class="img-responsive" />
+                                            <div class="matter">
+                                                <p>{{ tour.name_ko }}  <span>{{ tour.price }} UZS</span></p>
+                                            </div>
+                                        </div>
+                                        <div class="caption">
+                                            <div class="inner">
+                                                <h4>{{ tour.name_ko }}</h4>
+                                                <p>{{ tour.description_ko }}</p>
+                                            </div>
+                                            <div class="text-left">
+                                                <button type="button" onclick="location.href='tour-booking-form.html'">주문하려면 <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
+                                                <button type="button" onclick="location.href='tour-grid-view.html'">자세히 알아보기 <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="caption">
-                                    <div class="inner">
-                                        <h4>{{ tour.name_ko }}</h4>
-                                        <p>{{ tour.description_ko }}</p>
-                                    </div>
-                                    <div class="text-left">
-                                        <button type="button" onclick="location.href='tour-booking-form.html'">주문하려면 <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
-                                        <button type="button" onclick="location.href='tour-grid-view.html'">자세히 알아보기 <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
-                                    </div>
+                            {% endfor %}
+                            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                                <div class="text-center">
+                                    <button class="btn-primary" type="button" onclick="location.href='{% url 'ko_tour_list' %}'">더보기 <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
                                 </div>
                             </div>
                         </div>
-                    {% endfor %}
-                    <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                    </div>
+                </div>
+            </div>
+        </div>
+    {# End Tours #}
+
+    {# Video #}
+        <div class="placetop">
+            <div class="container">
+                <div class="row">
+                    <div class="places">
+                        <h1>비디오 검토</h1>
+                        <p>이 비디오가 끝나면 우리나라를 방문하고 싶을 것입니다.</p>
+                        <hr>
                         <div class="text-center">
-                            <button class="btn-primary" type="button" onclick="location.href='{% url 'ko_tour_list' %}'">더보기 <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
+                        <iframe width="100%" height="400" src="https://www.youtube.com/embed/csjkd06KF2w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
                     </div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-{# End Tours #}
-{# Video #}
-<div class="placetop">
-	<div class="container">
-		<div class="row">
-			<div class="places">
-				<h1>비디오 검토</h1>
-				<p>이 비디오가 끝나면 우리나라를 방문하고 싶을 것입니다.</p>
-				<hr>
-                <div class="text-center">
-                <iframe width="100%" height="400" src="https://www.youtube.com/embed/csjkd06KF2w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
-			</div>
-		</div>
-	</div>
-</div>
-{# End Video #}
-{# Gallery #}
-<div class="placetop">
-	<div class="container">
-		<div class="row">
-			<div class="places">
-				<h1>갤러리</h1>
-				<p>우리나라의 정수를 담은 사진</p>
-				<hr>
-			</div>
-		</div>
-	</div>
-	<div class="tab-content gallery">
-		<div class="tab-pane active" id="alls">
-			<ul class="list-inline">
-				<li>
-					<div class="product-thumb">
-						<div class="image">
-							<img src="{% static 'img/gallery/1.jpg' %}" alt="g1" title="g1" class="img-responsive" />
-						</div>
-					</div>
-				</li>
-                <li>
-					<div class="product-thumb">
-						<div class="image">
-							<img src="{% static 'img/gallery/2.jpg' %}" alt="g1" title="g1" class="img-responsive" />
-						</div>
-					</div>
-				</li>
-                <li>
-					<div class="product-thumb">
-						<div class="image">
-							<img src="{% static 'img/gallery/3.jpg' %}" alt="g1" title="g1" class="img-responsive" />
-						</div>
-					</div>
-				</li>
-                <li>
-					<div class="product-thumb">
-						<div class="image">
-							<img src="{% static 'img/gallery/4.jpg' %}" alt="g1" title="g1" class="img-responsive" />
-						</div>
-					</div>
-				</li>
-                <li>
-					<div class="product-thumb">
-						<div class="image">
-							<img src="{% static 'img/gallery/5.jpg' %}" alt="g1" title="g1" class="img-responsive" />
-						</div>
-					</div>
-				</li>
-                <li>
-					<div class="product-thumb">
-						<div class="image">
-							<img src="{% static 'img/gallery/6.jpg' %}" alt="g1" title="g1" class="img-responsive" />
-						</div>
-					</div>
-				</li>
-                <li>
-					<div class="product-thumb">
-						<div class="image">
-							<img src="{% static 'img/gallery/7.jpg' %}" alt="g1" title="g1" class="img-responsive" />
-						</div>
-					</div>
-				</li>
-                <li>
-					<div class="product-thumb">
-						<div class="image">
-							<img src="{% static 'img/gallery/8.jpg' %}" alt="g1" title="g1" class="img-responsive" />
-						</div>
-					</div>
-				</li>
-			</ul>
-		</div>
+            </div>
+        </div>
+    {# End Video #}
 
-		<div class="text-center">
-			<button class="btn-primary" type="button" onclick="location.href='#'">더보기 <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
-		</div>
-	</div>
-</div>
-{# End Gallery #}
-{# Footer #}
-{% include 'blocks/footer.html' %}
-{# End Footer #}
-{# Scripts #}
-{% include 'blocks/scripts.html' %}
-{# End Scripts #}
+    {# Gallery #}
+        <div class="placetop">
+            <div class="container">
+                <div class="row">
+                    <div class="places">
+                        <h1>갤러리</h1>
+                        <p>우리나라의 정수를 담은 사진</p>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-content gallery">
+                <div class="tab-pane active" id="alls">
+                    <ul class="list-inline">
+                        <li>
+                            <div class="product-thumb">
+                                <div class="image">
+                                    <img src="{% static 'img/gallery/1.jpg' %}" alt="g1" title="g1" class="img-responsive" />
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="product-thumb">
+                                <div class="image">
+                                    <img src="{% static 'img/gallery/2.jpg' %}" alt="g1" title="g1" class="img-responsive" />
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="product-thumb">
+                                <div class="image">
+                                    <img src="{% static 'img/gallery/3.jpg' %}" alt="g1" title="g1" class="img-responsive" />
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="product-thumb">
+                                <div class="image">
+                                    <img src="{% static 'img/gallery/4.jpg' %}" alt="g1" title="g1" class="img-responsive" />
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="product-thumb">
+                                <div class="image">
+                                    <img src="{% static 'img/gallery/5.jpg' %}" alt="g1" title="g1" class="img-responsive" />
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="product-thumb">
+                                <div class="image">
+                                    <img src="{% static 'img/gallery/6.jpg' %}" alt="g1" title="g1" class="img-responsive" />
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="product-thumb">
+                                <div class="image">
+                                    <img src="{% static 'img/gallery/7.jpg' %}" alt="g1" title="g1" class="img-responsive" />
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="product-thumb">
+                                <div class="image">
+                                    <img src="{% static 'img/gallery/8.jpg' %}" alt="g1" title="g1" class="img-responsive" />
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
 
-</body>
+                <div class="text-center">
+                    <button class="btn-primary" type="button" onclick="location.href='#'">더보기 <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
+                </div>
+            </div>
+        </div>
+    {# End Gallery #}
 {% endblock %}

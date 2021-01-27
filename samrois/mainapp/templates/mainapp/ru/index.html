@@ -2,16 +2,6 @@
 {% load static %}
 {% block title %}SRTour - Главная{% endblock %}
 {% block content %}
-<body>
-{# Top #}
-{% include 'blocks/top.html' %}
-{# End Top #}
-{# Header #}
-{% include 'blocks/header.html' %}
-{# End Header #}
-{# Menu #}
-{% include 'blocks/menu.html' %}
-{# End Menu #}
 {# Slider #}
 <div class="slice">
 		<div class="slideshow owl-carousel">
@@ -23,6 +13,7 @@
 		</div>
 	</div>
 {# End Slider #}
+
 {# Tours #}
 <div class="placetop">
 	<div class="container">
@@ -67,6 +58,7 @@
 	</div>
 </div>
 {# End Tours #}
+
 {# Video #}
 <div class="placetop">
 	<div class="container">
@@ -83,6 +75,7 @@
 	</div>
 </div>
 {# End Video #}
+
 {# Gallery #}
 <div class="placetop">
 	<div class="container">
@@ -162,12 +155,4 @@
 	</div>
 </div>
 {# End Gallery #}
-{# Footer #}
-{% include 'blocks/footer.html' %}
-{# End Footer #}
-{# Scripts #}
-{% include 'blocks/scripts.html' %}
-{# End Scripts #}
-
-</body>
 {% endblock %}

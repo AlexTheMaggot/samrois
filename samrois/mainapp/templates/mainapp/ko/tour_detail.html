@@ -1,28 +1,9 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-<head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>Our Tours</title>
-<!-- Bootstrap stylesheet -->
-<link href="bootstrap/css/bootstrap.css" rel="stylesheet">
-<!-- font -->
-<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900%7CPT+Serif:400,400i,700,700i" rel="stylesheet">
-<link href="css/ele-style.css" rel="stylesheet" type="text/css"/>
-<!-- stylesheet -->
-<link href="css/style.css" rel="stylesheet" type="text/css"/>
-<link href="css/responsive.css" rel="stylesheet" type="text/css"/>
-<!-- font-awesome -->
-<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-<!-- crousel css -->
-<link href="js/owl-carousel/owl.carousel.css" rel="stylesheet" type="text/css" />
-<!--bootstrap select-->
-<link href="js/dist/css/bootstrap-select.css" rel="stylesheet" type="text/css" />
-<link href="js/datetimepicker/bootstrap-datetimepicker.min.css" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" href="js/preetycheble/prettyCheckable.css"/>
-</head>
-<body>
+{% extends 'wrapper.html' %}
+
+{% block title %}{{ tour.name_en }}{% endblock %}
+
+{% block content %}
+    <body>
 <!-- top start here -->
 	<div id="top">
 		<div class="container">
@@ -1048,4 +1029,4 @@
 <script src="js/datetimepicker/moment.js"></script>
 <script src="js/datetimepicker/bootstrap-datetimepicker.min.js"></script>
 </body>
-</html>
+{% endblock %}
