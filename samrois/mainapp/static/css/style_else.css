@@ -1760,124 +1760,124 @@ li.active .hotel,li:hover .hotel{
 	padding:8px 0;
 }
 .canada{
-	background:url("../images/country-icons/c1.png")no-repeat;
+	background:url("../img/country-icons/c1.png")no-repeat;
 	margin:0 auto;
 	dispaly:block;
 	width:36px;
 	height:24px;
 }
 li.active .canada,li:hover .canada{
-	background:url("../images/country-icons/c1_w.png")no-repeat;
+	background:url("../img/country-icons/c1_w.png")no-repeat;
 }
 .usa{
-	background:url("../images/country-icons/c2.png")no-repeat;
+	background:url("../img/country-icons/c2.png")no-repeat;
 	margin:0 auto;
 	dispaly:block;
 	width:36px;
 	height:24px;
 }
 li.active .usa,li:hover .usa{
-	background:url("../images/country-icons/c2_w.png")no-repeat;
+	background:url("../img/country-icons/c2_w.png")no-repeat;
 }
 .india{
-	background:url("../images/country-icons/c3.png")no-repeat;
+	background:url("../img/country-icons/c3.png")no-repeat;
 	margin:0 auto;
 	dispaly:block;
 	width:36px;
 	height:24px;
 }
 li.active .india,li:hover .india{
-	background:url("../images/country-icons/c3_w.png")no-repeat;
+	background:url("../img/country-icons/c3_w.png")no-repeat;
 }
 .spain{
-	background:url("../images/country-icons/c4.png")no-repeat;
+	background:url("../img/country-icons/c4.png")no-repeat;
 	margin:0 auto;
 	dispaly:block;
 	width:36px;
 	height:24px;
 }
 li.active .spain,li:hover .spain{
-	background:url("../images/country-icons/c4_w.png")no-repeat;
+	background:url("../img/country-icons/c4_w.png")no-repeat;
 }
 .england{
-	background:url("../images/country-icons/c5.png")no-repeat;
+	background:url("../img/country-icons/c5.png")no-repeat;
 	margin:0 auto;
 	dispaly:block;
 	width:36px;
 	height:24px;
 }
 li.active .england,li:hover .england{
-	background:url("../images/country-icons/c5_w.png")no-repeat;
+	background:url("../img/country-icons/c5_w.png")no-repeat;
 }
 .switzerland{
-	background:url("../images/country-icons/c6.png")no-repeat;
+	background:url("../img/country-icons/c6.png")no-repeat;
 	margin:0 auto;
 	dispaly:block;
 	width:36px;
 	height:24px;
 }
 li.active .switzerland,li:hover .switzerland{
-	background:url("../images/country-icons/c6_w.png")no-repeat;
+	background:url("../img/country-icons/c6_w.png")no-repeat;
 }
 .newzealand{
-	background:url("../images/country-icons/c7.png")no-repeat;
+	background:url("../img/country-icons/c7.png")no-repeat;
 	margin:0 auto;
 	dispaly:block;
 	width:36px;
 	height:24px;
 }
 li.active .newzealand,li:hover .newzealand{
-	background:url("../images/country-icons/c7_w.png")no-repeat;
+	background:url("../img/country-icons/c7_w.png")no-repeat;
 }
 .nepal{
-	background:url("../images/country-icons/c8.png")no-repeat;
+	background:url("../img/country-icons/c8.png")no-repeat;
 	margin:0 auto;
 	dispaly:block;
 	width:36px;
 	height:24px;
 }
 li.active .nepal,li:hover .nepal{
-	background:url("../images/country-icons/c8_w.png")no-repeat;
+	background:url("../img/country-icons/c8_w.png")no-repeat;
 }
 .malasya{
-	background:url("../images/country-icons/c9.png")no-repeat;
+	background:url("../img/country-icons/c9.png")no-repeat;
 	margin:0 auto;
 	dispaly:block;
 	width:36px;
 	height:24px;
 }
 li.active .malasya,li:hover .malasya{
-	background:url("../images/country-icons/c9_w.png")no-repeat;
+	background:url("../img/country-icons/c9_w.png")no-repeat;
 }
 .allgallery{
-	background:url("../images/gallery-icon/icon1.png") no-repeat;
+	background:url("../img/gallery-icon/icon1.png") no-repeat;
 	margin:5px auto 0;
 	dispaly:block;
 	width:24px;
 	height:24px;
 }
 li.active .allgallery, li:hover .allgallery{
-	background:url("../images/gallery-icon/icon1-hover.png") no-repeat;
+	background:url("../img/gallery-icon/icon1-hover.png") no-repeat;
 }
 .summer{
-	background:url("../images/gallery-icon/icon4.png") no-repeat;
+	background:url("../img/gallery-icon/icon4.png") no-repeat;
 	margin:0 auto;
 	dispaly:block;
 	width:30px;
 	height:38px;
 }
 li.active .summer, li:hover .summer{
-	background:url("../images/gallery-icon/icon4-hover.png") no-repeat;
+	background:url("../img/gallery-icon/icon4-hover.png") no-repeat;
 }
 .sport{
-	background:url("../images/gallery-icon/icon5.png")no-repeat;
+	background:url("../img/gallery-icon/icon5.png")no-repeat;
 	margin:0 auto;
 	dispaly:block;
 	width:25px;
 	height:36px;
 }
 li.active .sport, li:hover .sport{
-	background:url("../images/gallery-icon/icon5-hover.png") no-repeat;
+	background:url("../img/gallery-icon/icon5-hover.png") no-repeat;
 }
 .header3 .country .places  li > a{
 	padding:12px 0;
@@ -2259,7 +2259,7 @@ li.active .sport, li:hover .sport{
 	color:#fff;
 }
 .bread-crumb{
-	background:url("../images/image-top.jpg") no-repeat;
+	background:url("../img/image-top.jpg") no-repeat;
 	height:110px;
 	padding-top:30px;
 	text-align:center;
@@ -2369,7 +2369,7 @@ li.active .sport, li:hover .sport{
 	height: 990px;
 }
 .leftside{
-	background-image: url("../images/bg-image.jpg");
+	background-image: url("../img/bg-image.jpg");
 	height: 990px;
 	background-repeat: no-repeat;
 	display:block;
@@ -3040,14 +3040,14 @@ li.active .sport, li:hover .sport{
 	padding:0;
 }
 .prettycheckbox > a {
-    background: rgba(0, 0, 0, 0) url("../images/uncheck.png") no-repeat scroll 0 0 !important;
+    background: rgba(0, 0, 0, 0) url("../img/uncheck.png") no-repeat scroll 0 0 !important;
 	width:10px !important;
 	height:16px !important;
 	margin-right:5px !important;
 	top:0 !important;
 }
 .prettycheckbox > a.checked {
-    background: url("../images/check.png") no-repeat !important;
+    background: url("../img/check.png") no-repeat !important;
 }
 .left-box .book .tab-content .form-group {
 	margin:0 0 30px;
