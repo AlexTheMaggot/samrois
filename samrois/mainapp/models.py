@@ -17,6 +17,7 @@ class Tour(models.Model):
     name_en = models.CharField(verbose_name='Название на английском', max_length=200)
     name_ko = models.CharField(verbose_name='Название на корейском', max_length=200)
     img_list = models.ImageField(verbose_name='Мниатюра 370х302', upload_to='img/tours/')
+    img_detail = models.ImageField(verbose_name='Изображение (870х400)', upload_to='img/tours/')
     description_ru = models.TextField(verbose_name='Описание на русском')
     description_en = models.TextField(verbose_name='Описание на английском')
     description_ko = models.TextField(verbose_name='Описание на корейском')
