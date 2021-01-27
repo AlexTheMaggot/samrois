@@ -50,7 +50,7 @@ def tour_list(request):
 
 # TourDetailView
 def tour_detail(request, tour_id):
-    tours = Tour.objects.filter(id__exclude=tour_id)
+    tours = Tour.objects.exclude(id=tour_id)
     tour = get_object_or_404(Tour, id=tour_id)
     context = {
         'tours': tours,
