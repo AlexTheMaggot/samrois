@@ -3,728 +3,113 @@
 {% block title %}{{ tour.name_en }}{% endblock %}
 
 {% block content %}
-        {# Breadcrumb #}
-            <div class="bread-crumb">
-                <div class="container">
-                    <h2>{{ tour.name_ru }}</h2>
-                    <ul class="list-inline">
-                        <li><a href="{% url 'ru_index' %}">Главная</a></li>
-                        <li><a href="{% url 'ru_tour_list' %}">Направления</a></li>
-                        <li><a href="{% url 'ru_tour_detail' tour.id %}">{{ tour.name_ru }}</a></li>
-                    </ul>
-                </div>
+    {# Breadcrumb #}
+        <div class="bread-crumb">
+            <div class="container">
+                <h2>{{ tour.name_ru }}</h2>
+                <ul class="list-inline">
+                    <li><a href="{% url 'ru_index' %}">Главная</a></li>
+                    <li><a href="{% url 'ru_tour_list' %}">Направления</a></li>
+                    <li><a href="{% url 'ru_tour_detail' tour.id %}">{{ tour.name_ru }}</a></li>
+                </ul>
             </div>
-        {# End Breadcrumb #}
+        </div>
+    {# End Breadcrumb #}
 
-        {# MainContainer #}
-            <div class="placetop">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-3">
-                            <div class="left-box">
-                                <h6>TALK TO EXPERT</h6>
-                                <div class="talk">
-                                    <ul class="list-unstyled">
-                                        <li>
-                                            <i class="fa fa-skype" aria-hidden="true"></i>
-                                            <h4>CONTACT SKYPE</h4>
-                                            <P>John Doe</P>
-                                        </li>
-                                        <li>
-                                            <i class="fa fa-phone" aria-hidden="true"></i>
-                                            <h4>PHONE</h4>
-                                            <P>+1 (123) 123 12345</P>
-                                        </li>
-                                        <li>
-                                            <i class="fa fa-envelope" aria-hidden="true"></i>
-                                            <h4>EMAIL</h4>
-                                            <P>Johndoe01@gmail.com</P>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="left-box">
-                                <h6>LAST MINUTE DEALS</h6>
-                                <div class="last1">
-                                    <ul class="list-unstyled">
-                                        <li>
-                                            <div class="product-thumb">
-                                                <div class="image">
-                                                    <img src="images/tour/img1.jpg" class="img-responsive" alt="img1" title="img1" />
-                                                    <div class="hoverbox">
-                                                        <div class="icon_plus" aria-hidden="true"></div>
-                                                    </div>
-                                                </div>
-                                                <div class="caption">
-                                                    <h4>Island Trip</h4>
-                                                    <div class="rate">
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                                    </div>
-                                                    <p>HONAI - VIETNAM</p>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="product-thumb">
-                                                <div class="image">
-                                                    <img src="images/tour/img2.jpg" class="img-responsive" alt="img2" title="img2" />
-                                                    <div class="hoverbox">
-                                                        <div class="icon_plus" aria-hidden="true"></div>
-                                                    </div>
-                                                </div>
-                                                <div class="caption">
-                                                    <h4>Goa Trip</h4>
-                                                    <div class="rate">
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                                    </div>
-                                                    <p>HONAI - VIETNAM</p>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="product-thumb">
-                                                <div class="image">
-                                                    <img src="images/tour/img3.jpg" class="img-responsive" alt="img3" title="img3" />
-                                                    <div class="hoverbox">
-                                                        <div class="icon_plus" aria-hidden="true"></div>
-                                                    </div>
-                                                </div>
-                                                <div class="caption">
-                                                    <h4>USA Trip</h4>
-                                                    <div class="rate">
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                                    </div>
-                                                    <p>HONAI - VIETNAM</p>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="product-thumb">
-                                                <div class="image">
-                                                    <img src="images/tour/img4.jpg" class="img-responsive" alt="img4" title="img4" />
-                                                    <div class="hoverbox">
-                                                        <div class="icon_plus" aria-hidden="true"></div>
-                                                    </div>
-                                                </div>
-                                                <div class="caption">
-                                                    <h4>Beach</h4>
-                                                    <div class="rate">
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                                    </div>
-                                                    <p>HONAI - VIETNAM</p>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="left-image">
-                                <img src="images/tour/banner1.jpg" class="img-responsive" alt="banner1" title="banner1" />
+    {# MainContainer #}
+        <div class="placetop">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="left-box">
+                            <h6>Консультация</h6>
+                            <div class="talk">
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <i class="fa fa-phone" aria-hidden="true"></i>
+                                        <h4>Телефон</h4>
+                                        <P>+1 (123) 123-12-34</P>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                                        <h4>EMAIL</h4>
+                                        <P>Johndoe01@gmail.com</P>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
-                        <div class="col-sm-9 mainpage">
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <div class="thumb">
-                                        <img src="images/tour/image1.jpg" alt="image1" title="image1" class="img-responsive"/>
-
-                                        <div id="additional" class="owl-carousel">
-                                            <div class="item">
-                                                <div class="product-thumb">
-                                                    <div class="image">
-                                                        <img src="images/tour/thb1.jpg" class="img-responsive" alt="thb1" title="thb1" />
-                                                        <div class="hoverbox"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="item">
-                                                <div class="product-thumb">
-                                                    <div class="image">
-                                                        <img src="images/tour/thb2.jpg" class="img-responsive" alt="thb2" title="thb2" />
-                                                        <div class="hoverbox"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="item">
-                                                <div class="product-thumb">
-                                                    <div class="image">
-                                                        <img src="images/tour/thb3.jpg" class="img-responsive" alt="thb3" title="thb3" />
-                                                        <div class="hoverbox"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="item">
-                                                <div class="product-thumb">
-                                                    <div class="image">
-                                                        <img src="images/tour/thb4.jpg" class="img-responsive" alt="thb4" title="thb4" />
-                                                        <div class="hoverbox"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="item">
-                                                <div class="product-thumb">
-                                                    <div class="image">
-                                                        <img src="images/tour/thb5.jpg" class="img-responsive" alt="thb5" title="thb5" />
-                                                        <div class="hoverbox"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="item">
-                                                <div class="product-thumb">
-                                                    <div class="image">
-                                                        <img src="images/tour/thb6.jpg" class="img-responsive" alt="thb6" title="thb6" />
-                                                        <div class="hoverbox"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="item">
-                                                <div class="product-thumb">
-                                                    <div class="image">
-                                                        <img src="images/tour/thb7.jpg" class="img-responsive" alt="thb7" title="thb7" />
-                                                        <div class="hoverbox"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="item">
-                                                <div class="product-thumb">
-                                                    <div class="image">
-                                                        <img src="images/tour/thb8.jpg" class="img-responsive" alt="thb8" title="thb8" />
-                                                        <div class="hoverbox"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="item">
-                                                <div class="product-thumb">
-                                                    <div class="image">
-                                                        <img src="images/tour/thb9.jpg" class="img-responsive" alt="thb9" title="thb9" />
-                                                        <div class="hoverbox"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="item">
-                                                <div class="product-thumb">
-                                                    <div class="image">
-                                                        <img src="images/tour/thb1.jpg" class="img-responsive" alt="thb1" title="thb1" />
-                                                        <div class="hoverbox"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="item">
-                                                <div class="product-thumb">
-                                                    <div class="image">
-                                                        <img src="images/tour/thb2.jpg" class="img-responsive" alt="thb2" title="thb2" />
-                                                        <div class="hoverbox"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="item">
-                                                <div class="product-thumb">
-                                                    <div class="image">
-                                                        <img src="images/tour/thb3.jpg" class="img-responsive" alt="thb3" title="thb3" />
-                                                        <div class="hoverbox"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="item">
-                                                <div class="product-thumb">
-                                                    <div class="image">
-                                                        <img src="images/tour/thb4.jpg" class="img-responsive" alt="thb4" title="thb4" />
-                                                        <div class="hoverbox"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="item">
-                                                <div class="product-thumb">
-                                                    <div class="image">
-                                                        <img src="images/tour/thb5.jpg" class="img-responsive" alt="thb5" title="thb5" />
-                                                        <div class="hoverbox"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="tour-detail col-sm-12">
-                                    <ul class="nav nav-tabs list-inline">
-                                        <li class="active">
-                                            <input type="checkbox" value="None"  name="pool" class="checkclass checkbox-inline"/><a href="tour-detail-view.html#check-availabilty" data-toggle="tab" aria-expanded="true">check availabilty</a>
-                                        </li>
-                                        <li class="">
-                                            <input type="checkbox" value="None"  name="pool" class="checkclass checkbox-inline"/><a href="tour-detail-view.html#location" data-toggle="tab" aria-expanded="false">location</a>
-                                        </li>
-                                        <li class="">
-                                            <input type="checkbox" value="None"  name="pool" class="checkclass checkbox-inline"/><a href="tour-detail-view.html#itinerary" data-toggle="tab" aria-expanded="false">itinerary</a>
-                                        </li>
-                                        <li class="">
-                                            <input type="checkbox" value="None"  name="pool" class="checkclass checkbox-inline"/><a href="tour-detail-view.html#gallery" data-toggle="tab" aria-expanded="false">gallery</a>
-                                        </li>
-                                        <li class="">
-                                            <input type="checkbox" value="None"  name="pool" class="checkclass checkbox-inline"/><a href="tour-detail-view.html#review" data-toggle="tab" aria-expanded="false">review</a>
-                                        </li>
-                                        <li class="">
-                                            <input type="checkbox" value="None"  name="pool" class="checkclass checkbox-inline"/><a href="tour-detail-view.html#add-review" data-toggle="tab" aria-expanded="false">add review</a>
-                                        </li>
-                                    </ul>
-                                    <div class="tab-content">
-                                        <div class="tab-pane active col-sm-12" id="check-availabilty">
-                                            <form class="form-horizontal row" method="post">
-                                                <div class="form-group col-sm-3">
-                                                    <div class="date">
-                                                        <label>From</label>
-                                                        <input name="s" class="form-control" value="" placeholder="dd/mm/yy" type="text">
-                                                        <button type="button" class="calender"><i class="fa fa-calendar-o" aria-hidden="true"></i></button>
-                                                    </div>
-                                                </div>
-                                                <div class="date form-group col-sm-3">
-                                                    <div class="date">
-                                                        <label>To</label>
-                                                        <input name="s" class="form-control" value="" placeholder="dd/mm/yy" type="text">
-                                                        <button type="button" class="calender"><i class="fa fa-calendar-o" aria-hidden="true"></i></button>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-6">
-                                                    <button class="btn-primary" type="button">Update Now</button>
-                                                </div>
-                                            </form>
-                                        </div>
-                                        <div class="tab-pane col-sm-12" id="location">
-                                            <div class="map">
-                                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d219104.85983086875!2d75.71658808151895!3d30.90026973769041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a837462345a7d%3A0x681102348ec60610!2sLudhiana%2C+Punjab!5e0!3m2!1sen!2sin!4v1482266274532"></iframe>
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane col-sm-12" id="itinerary">
-                                            <h6>01 DAY</h6>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus, nulla quis dignissim pellentesque, erat odio fermentum ante, vel fringilla lacus nibh vel massa. Nulla justo orci, porta eget libero fringilla, iaculis posuere dolor. Phasellus eleifend mauris non augue vulputate ultricies. Nulla facilisi. Donec tempor suscipit justo, Vitae maximums mauris posuere non.</p>
-                                            <h6>02 DAY</h6>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus, nulla quis dignissim pellentesque, erat odio fermentum ante, vel fringilla lacus nibh vel massa. Nulla justo orci, porta eget libero fringilla, iaculis posuere dolor. Phasellus eleifend mauris non augue vulputate ultricies. Nulla facilisi. Donec tempor suscipit justo, Vitae maximums mauris posuere non.</p>
-                                            <h6>03 DAY</h6>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus, nulla quis dignissim pellentesque, erat odio fermentum ante, vel fringilla lacus nibh vel massa. Nulla justo orci, porta eget libero fringilla, iaculis posuere dolor. Phasellus eleifend mauris non augue vulputate ultricies. Nulla facilisi. Donec tempor suscipit justo, Vitae maximums mauris posuere non.</p>
-                                            <h6>04 DAY RETURN</h6>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus, nulla quis dignissim pellentesque, erat odio fermentum ante, vel fringilla lacus nibh vel massa. Nulla justo orci, porta eget libero fringilla, iaculis posuere dolor. Phasellus eleifend mauris non augue vulputate ultricies. Nulla facilisi. Donec tempor suscipit justo, Vitae maximums mauris posuere non.</p>
-                                        </div>
-                                        <div class="tab-pane col-sm-12" id="gallery">
-                                            <ul class="list-inline">
-                                                <li><img src="images/tour/g1.jpg" class="img-responsive" alt="g1" title="g1" /></li>
-                                                <li><img src="images/tour/g2.jpg" class="img-responsive" alt="g2" title="g2" /></li>
-                                                <li><img src="images/tour/g3.jpg" class="img-responsive" alt="g3" title="g3" /></li>
-                                                <li><img src="images/tour/g4.jpg" class="img-responsive" alt="g4" title="g4" /></li>
-                                                <li><img src="images/tour/g5.jpg" class="img-responsive" alt="g5" title="g5" /></li>
-                                                <li><img src="images/tour/g6.jpg" class="img-responsive" alt="g6" title="g6" /></li>
-                                                <li><img src="images/tour/g7.jpg" class="img-responsive" alt="g7" title="g7" /></li>
-                                                <li><img src="images/tour/g8.jpg" class="img-responsive" alt="g8" title="g8" /></li>
-                                                <li><img src="images/tour/g9.jpg" class="img-responsive" alt="g9" title="g9" /></li>
-                                                <li><img src="images/tour/g10.jpg" class="img-responsive" alt="g10" title="g10" /></li>
-                                            </ul>
-                                        </div>
-                                        <div class="tab-pane col-sm-12" id="review">
-                                            <div class="review">
-                                                <img src="images/tour/pic1.jpg" class="img-responsive" alt="pic1" title="pic1" />
-                                                <div class="caption">
-                                                    <h6>John Doe <span>27-Jan-2017</span></h6>
-                                                    <div class="rate">
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                                    </div>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis elementum, dolor sit amet.</p>
-                                                </div>
-                                            </div>
-                                            <div class="review">
-                                                <img src="images/tour/pic2.jpg" class="img-responsive" alt="pic2" title="pic2" />
-                                                <div class="caption">
-                                                    <h6>John Doe <span>27-Jan-2017</span></h6>
-                                                    <div class="rate">
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                                    </div>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis elementum, dolor sit amet.</p>
-                                                </div>
-                                            </div>
-                                            <div class="review">
-                                                <img src="images/tour/pic3.jpg" class="img-responsive" alt="pic3" title="pic3" />
-                                                <div class="caption">
-                                                    <h6>John Doe <span>27-Jan-2017</span></h6>
-                                                    <div class="rate">
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                                    </div>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis elementum, dolor sit amet.</p>
-                                                </div>
-                                            </div>
-                                            <div class="text-center">
-                                                <button type="button" class="btn-primary">View More <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane col-sm-12" id="add-review">
-                                            <h2>ADD REVIEW</h2>
-                                            <form class="form-horizontal row" method="post">
-                                                <fieldset>
-                                                    <div class="form-group col-sm-6">
-                                                        <label>Name*</label>
-                                                        <input class="form-control" id="input-name" value="" name="jobname" required="" type="text">
-                                                        <label>Email*</label>
-                                                        <input class="form-control" id="input-email" value="" name="email" required="" type="text">
-                                                        <label>YOUR RATING*</label>
-                                                        <div class="rate">
-                                                            <i class="fa fa-star-o" aria-hidden="true"></i>
-                                                            <i class="fa fa-star-o" aria-hidden="true"></i>
-                                                            <i class="fa fa-star-o" aria-hidden="true"></i>
-                                                            <i class="fa fa-star-o" aria-hidden="true"></i>
-                                                            <i class="fa fa-star-o" aria-hidden="true"></i>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="form-group col-sm-6">
-                                                        <label>YOUR REVIEW*</label>
-                                                        <textarea class="form-control" id="input-enquiry" rows="10" name="enquiry" placeholder="" required=""></textarea>
-                                                        <button type="submit" value="Submit" class="btn btn-primary btnus">Submit</button>
-                                                    </div>
-                                                </fieldset>
-                                            </form>
-                                        </div>
-                                    </div>
+                    </div>
+                    <div class="col-sm-9 mainpage">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="thumb">
+                                    <img src="{{ tour.img_detail.url }}" alt="{{ tour.name_ru }}" class="img-responsive"/>
                                 </div>
                             </div>
 
-                            <div class="book-now col-sm-12">
-                                <h1>BOOK NOW <span>$ 650</span></h1>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent congue purus quis ornare malesuada. Cras vel tellus arcu. Nulla at ullamcorper dui. Aliquam erat volutpat. In velit nulla.</p>
-                                <h5>4.30 PM TOUR</h5>
+                            <div class="tour-detail col-sm-12">
+                                <div class="tab-content">
+                                    <div class="tab-pane active col-sm-12" id="add-review">
+                                        <h2>ОФОРМИТЬ ЗАКАЗ</h2>
+                                        <form class="form-horizontal row" method="post">
+                                            <fieldset>
+                                                <div class="form-group col-sm-6">
+                                                    <label for="input-name">Имя*</label>
+                                                    <input class="form-control" id="input-name" value="" name="jobname" required="" type="text">
+                                                    <label for="input-email">Номер телефона*</label>
+                                                    <input class="form-control" id="input-email" value="" name="email" required="" type="tel">
+                                                </div>
+
+                                                <div class="form-group col-sm-6">
+                                                    <label for="input-enquiry">Комментарий</label>
+                                                    <textarea class="form-control" id="input-enquiry" rows="10" name="enquiry" placeholder=""></textarea>
+                                                    <button type="submit" value="Submit" class="btn btn-primary btnus">Заказать</button>
+                                                </div>
+                                            </fieldset>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="clearfix"></div>
+
+                        <div class="row tour">
+                            <div class="places related">
+                                <h1>Другие направления</h1>
                                 <hr>
-                                <form class="form-horizontal" method="post">
-                                    <div class="form-group col-sm-3 paddleft">
-                                        <div class="date">
-                                            <label>AVAILABLE ON</label>
-                                            <input name="s" class="form-control" value="" placeholder="dd/mm/yy" type="text">
-                                            <button type="button" class="calender"><i class="fa fa-calendar-o" aria-hidden="true"></i></button>
-                                        </div>
-                                    </div>
-                                    <div class="form-group col-sm-2 padd-left">
-                                        <label>ADULTS</label>
-                                        <select class="selectpicker form-control" name=	"location">
-                                            <option value="1">01</option>
-                                            <option value="0">02</option>
-                                            <option value="0">03</option>
-                                            <option value="0">04</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group col-sm-2 padd-left">
-                                        <label>KIDS</label>
-                                        <select class="selectpicker form-control" name=	"location">
-                                            <option value="1">01</option>
-                                            <option value="0">02</option>
-                                            <option value="0">03</option>
-                                            <option value="0">04</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group col-sm-2 padd-left">
-                                        <label>TOTAL AMOUNT</label>
-                                        <input name="s" class="form-control" value="" placeholder="$650.00" type="text">
-                                    </div>
-                                    <div class="col-sm-3 mar-t padd-left">
-                                        <a href="tour-booking-form.html" class="btn-primary">Book NOW</a>
-                                    </div>
-                                </form>
                             </div>
-
-                            <div class="clearfix"></div>
-
-                            <div class="row tour">
-                                <div class="places related">
-                                    <h1>related tours</h1>
-                                    <hr>
+                            <div class="owl-carousel" id="related-pro">
+                                {% for tour in tours %}
+                                    <div class="item">
+                                        <div class="col-xs-12">
+                                            <div class="product-thumb">
+                                                <div class="image">
+                                                    <a href="tour-detail-view.html#"><img src="{{ tour.img_list.url }}" alt="t1" title="t1" class="img-responsive" /></a>
+                                                    <div class="matter">
+                                                        <p>{{ tour.name_ru }}  <span>{{ tour.price }} UZS</span></p>
+                                                    </div>
+                                                </div>
+                                                <div class="caption">
+                                                    <div class="inner">
+                                                        <h4>{{ tour.name_ru }}</h4>
+                                                        <p>{{ tour.description_ru }}</p>
+                                                    </div>
+                                                    <div class="text-left">
+                                                        <button type="button" onclick="location.href='tour-booking-form.html'">Заказать <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
+                                                        <button type="button" onclick="location.href='/ru/tours/{{ tour.id }}'">Узнать больше <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                 </div>
-                                <div class="owl-carousel" id="related-pro">
-                                    <div class="item">
-                                        <div class="col-xs-12">
-                                            <div class="product-thumb">
-                                                <div class="image">
-                                                    <a href="tour-detail-view.html#"><img src="images/t1.jpg" alt="t1" title="t1" class="img-responsive" /></a>
-                                                    <div class="hoverbox">
-                                                        <div class="icon_plus" aria-hidden="true"></div>
-                                                    </div>
-                                                    <div class="matter">
-                                                        <p>grand switerland  <span>$575.00</span></p>
-                                                    </div>
-                                                </div>
-                                                <div class="caption">
-                                                    <div class="inner">
-                                                        <h4>Grand Switerland</h4>
-                                                        <div class="rate">
-                                                            <span>HOT DEALS</span>
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                                        </div>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis elementum, dolor sit amet[...]</p>
-                                                    </div>
-                                                    <div class="text-left">
-                                                        <button type="button" onclick="location.href='tour-booking-form.html'">Book Now <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
-                                                        <button type="button" onclick="location.href='tour-grid-view.html'">View More <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="col-xs-12">
-                                            <div class="product-thumb">
-                                                <div class="image">
-                                                    <a href="tour-detail-view.html#"><img src="images/t2.jpg" alt="t2" title="t2" class="img-responsive" /></a>
-                                                    <div class="hoverbox">
-                                                        <div class="icon_plus" aria-hidden="true"></div>
-                                                    </div>
-                                                    <div class="matter">
-                                                        <p>discover japan  <span>$575.00</span></p>
-                                                    </div>
-                                                </div>
-                                                <div class="caption">
-                                                    <div class="inner">
-                                                        <h4>Discover Japan</h4>
-                                                        <div class="rate">
-                                                            <span>HOT DEALS</span>
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                                        </div>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis elementum, dolor sit amet[...]</p>
-                                                    </div>
-                                                    <div class="text-left">
-                                                        <button type="button" onclick="location.href='tour-booking-form.html'">Book Now <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
-                                                        <button type="button" onclick="location.href='tour-grid-view.html'">View More <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="col-xs-12">
-                                            <div class="product-thumb">
-                                                <div class="image">
-                                                    <a href="tour-detail-view.html#"><img src="images/t3.jpg" alt="t3" title="t3" class="img-responsive" /></a>
-                                                    <div class="hoverbox">
-                                                        <div class="icon_plus" aria-hidden="true"></div>
-                                                    </div>
-                                                    <div class="matter">
-                                                        <p>Niko Trip  <span>$575.00</span></p>
-                                                    </div>
-                                                </div>
-                                                <div class="caption">
-                                                    <div class="inner">
-                                                        <h4>Niko Trip</h4>
-                                                        <div class="rate">
-                                                            <span>HOT DEALS</span>
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                                        </div>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis elementum, dolor sit amet[...]</p>
-                                                    </div>
-                                                    <div class="text-left">
-                                                        <button type="button" onclick="location.href='tour-booking-form.html'">Book Now <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
-                                                        <button type="button" onclick="location.href='tour-grid-view.html'">View More <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="col-xs-12">
-                                            <div class="product-thumb">
-                                                <div class="image">
-                                                    <a href="tour-detail-view.html#"><img src="images/t4.jpg" alt="t4" title="t4" class="img-responsive" /></a>
-                                                    <div class="hoverbox">
-                                                        <div class="icon_plus" aria-hidden="true"></div>
-                                                    </div>
-                                                    <div class="matter">
-                                                        <p>Singapore Trip  <span>$575.00</span></p>
-                                                    </div>
-                                                </div>
-                                                <div class="caption">
-                                                    <div class="inner">
-                                                        <h4>Singapore Trip</h4>
-                                                        <div class="rate">
-                                                            <span>HOT DEALS</span>
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                                        </div>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis elementum, dolor sit amet[...]</p>
-                                                    </div>
-                                                    <div class="text-left">
-                                                        <button type="button" onclick="location.href='tour-booking-form.html'">Book Now <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
-                                                        <button type="button" onclick="location.href='tour-grid-view.html'">View More <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="col-xs-12">
-                                            <div class="product-thumb">
-                                                <div class="image">
-                                                    <a href="tour-detail-view.html#"><img src="images/t5.jpg" alt="t5" title="t5" class="img-responsive" /></a>
-                                                    <div class="hoverbox">
-                                                        <div class="icon_plus" aria-hidden="true"></div>
-                                                    </div>
-                                                    <div class="matter">
-                                                        <p>The New California  <span>$575.00</span></p>
-                                                    </div>
-                                                </div>
-                                                <div class="caption">
-                                                    <div class="inner">
-                                                        <h4>The New California</h4>
-                                                        <div class="rate">
-                                                            <span>HOT DEALS</span>
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                                        </div>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis elementum, dolor sit amet[...]</p>
-                                                    </div>
-                                                    <div class="text-left">
-                                                        <button type="button" onclick="location.href='tour-booking-form.html'">Book Now <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
-                                                        <button type="button" onclick="location.href='tour-grid-view.html'">View More <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="col-xs-12">
-                                            <div class="product-thumb">
-                                                <div class="image">
-                                                    <a href="tour-detail-view.html#"><img src="images/t6.jpg" alt="t6" title="t6" class="img-responsive" /></a>
-                                                    <div class="hoverbox">
-                                                        <div class="icon_plus" aria-hidden="true"></div>
-                                                    </div>
-                                                    <div class="matter">
-                                                        <p>greece, santormi  <span>$575.00</span></p>
-                                                    </div>
-                                                </div>
-                                                <div class="caption">
-                                                    <div class="inner">
-                                                        <h4>Astro Place Hotels</h4>
-                                                        <div class="rate">
-                                                            <span>HOT DEALS</span>
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                                        </div>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis elementum, dolor sit amet[...]</p>
-                                                    </div>
-                                                    <div class="text-left">
-                                                        <button type="button" onclick="location.href='tour-booking-form.html'">Book Now <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
-                                                        <button type="button" onclick="location.href='tour-grid-view.html'">View More <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                {% endfor %}
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        {# End MainContainer #}
-
-        {# News #}
-            <div class="news">
-                <img src="images/subscribe-bg.jpg" class="img-responsive sub" alt="subscribe-bg" title="subscribe-bg" />
-                <div class="newsinner">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-4 col-xs-12">
-                            <div class="product-thumb">
-                                <div class="image">
-                                    <a href="tour-detail-view.html#"><img src="images/foot-banner1.png" alt="foot-banner1" title="foot-banner1" class="img-responsive" /></a>
-                                    <div class="hoverbox"></div>
-                                    <div class="matter">
-                                        <p class="des"><span class="icon_building_alt"></span> Hotel</p>
-                                        <button type="button"> Booking Now</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-4 col-xs-12">
-                            <div class="product-thumb">
-                                <div class="image">
-                                    <a href="tour-detail-view.html#"><img src="images/foot-banner2.png" alt="foot-banner2" title="foot-banner2" class="img-responsive" /></a>
-                                    <div class="hoverbox"></div>
-                                    <div class="off">
-                                        <span>Best Packages</span>
-                                    </div>
-                                    <div class="matter">
-                                        <p class="des1">$1000 <span>Package</span> to <small>Dubai</small></p>
-                                        <button type="button"> Booking Now</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-4 col-xs-12">
-                            <div class="product-thumb">
-                                <div class="image">
-                                    <a href="tour-detail-view.html#"><img src="images/foot-banner3.png" alt="foot-banner3" title="foot-banner3" class="img-responsive" /></a>
-                                    <div class="hoverbox"></div>
-                                    <div class="matter">
-                                        <p class="des2"><i class="icon_percent_alt"></i> 25% off<br> to <span>Island</span></p>
-                                        <button type="button"> Booking Now</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-12 col-xs-12">
-                            <form class="subscribe">
-                                <div class="form-group">
-                                    <div class="input-group">
-                                        <label>Subscribe to our newsletter</label>
-                                        <input placeholder="Enter your email" name="subscribe_email" value="" type="text">
-                                        <button class="btn btn-default btn-lg" type="submit">Subscribe Now</button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                </div>
-            </div>
-        {# End News #}
+        </div>
+    {# End MainContainer #}
 {% endblock %}
