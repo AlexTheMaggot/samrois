@@ -1,6 +1,6 @@
 # DjangoImports
 from django.shortcuts import render, redirect, get_object_or_404
-from .models import Slide, Tour
+from .models import Slide, Tour, Order
 # End DjangoImports
 
 
@@ -66,3 +66,17 @@ def tour_detail(request, tour_id):
     # End CheckLanguage
     return render(request, template, context)
 # End TourDetailView
+
+
+# OrderCreate
+def order_add(request):
+    if request.method == 'POST':
+        name = request.POST['name']
+        phone = request.POST['phone']
+        email = request.POST['email']
+        comment = request.POST['comment']
+
+        order = Order(name=name, phone=phone, email=email, comment=comment)
+        order.save()
+        return redirect('ru_index')
+# End OrderCreate
