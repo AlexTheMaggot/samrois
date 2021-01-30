@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Slide, Tour
+from .models import Slide, Tour, Order
 
 
 class SlideConfig(admin.ModelAdmin):
@@ -14,3 +14,10 @@ class TourConfig(admin.ModelAdmin):
 
 
 admin.site.register(Tour, TourConfig)
+
+
+class OrderConfig(admin.ModelAdmin):
+    list_display = ('name', 'phone', 'email')
+
+
+admin.site.register(Order, OrderConfig)
