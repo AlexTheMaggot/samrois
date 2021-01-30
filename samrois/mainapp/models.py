@@ -29,3 +29,17 @@ class Tour(models.Model):
     class Meta:
         verbose_name = 'Тур'
         verbose_name_plural = 'Туры'
+
+
+class Order(models.Model):
+    name = models.CharField(verbose_name='Имя', max_length=200, null=True, blank=True)
+    phone = models.IntegerField(verbose_name='Номер телефона', null=True, blank=True)
+    email = models.CharField(verbose_name='E-mail', max_length=200, null=True, blank=True)
+    comment = models.TextField(null=True, blank=True)
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = 'Заявка'
+        verbose_name_plural = 'Заявки'
