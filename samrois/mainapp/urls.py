@@ -9,6 +9,7 @@ from . import views
 # UrlPatterns
 urlpatterns = [
     path('', views.redirect_to_index),
+    path('order_add', views.order_add, name='order_create'),
 
     # RU
     path('ru/', views.index, name='ru_index'),
