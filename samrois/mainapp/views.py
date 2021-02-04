@@ -75,8 +75,12 @@ def order_add(request):
         phone = request.POST['phone']
         email = request.POST['email']
         comment = request.POST['comment']
+        if 'tour' in request.POST:
+            tour = Tour.objects.get(id=request.POST['tour'])
+            order = Order(name=name, phone=phone, email=email, comment=comment, tour=tour)
+        else:
+            order = Order(name=name, phone=phone, email=email, comment=comment, tour=None)
 
-        order = Order(name=name, phone=phone, email=email, comment=comment)
         order.save()
         return redirect('ru_index')
 # End OrderCreate
