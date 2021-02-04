@@ -84,3 +84,16 @@ def order_add(request):
         order.save()
         return redirect('ru_index')
 # End OrderCreate
+
+
+# ThankYou
+def thank_you(request):
+    if '/en/' in request.path:
+        template = 'mainapp/en/thank-you.html'
+    elif '/ko/' in request.path:
+        template = 'mainapp/ko/thank-you.html'
+    else:
+        template = 'mainapp/ru/thank-you.html'
+    return render(request, template)
+
+# End ThankYou
