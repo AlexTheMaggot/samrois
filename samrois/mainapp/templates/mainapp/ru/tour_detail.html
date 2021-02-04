@@ -28,12 +28,12 @@
                                     <li>
                                         <i class="fa fa-phone" aria-hidden="true"></i>
                                         <h4>Телефон</h4>
-                                        <P>+1 (123) 123-12-34</P>
+                                        <P>+998 (93) 331-50-09</P>
                                     </li>
                                     <li>
                                         <i class="fa fa-envelope" aria-hidden="true"></i>
                                         <h4>EMAIL</h4>
-                                        <P>Johndoe01@gmail.com</P>
+                                        <P>Abdullaev@samrois.uz</P>
                                     </li>
                                 </ul>
                             </div>
@@ -53,20 +53,20 @@
                                         <h2>ОФОРМИТЬ ЗАКАЗ</h2>
                                         <form class="form-horizontal row" method="POST" action="{% url 'order_create' %}">
                                             {% csrf_token %}
-                                            <input type="hidden" name="tour" value="{{ tour.name_ru }}">
+                                            <input type="hidden" name="tour" value="{{ tour.id }}">
                                             <fieldset>
                                                 <div class="form-group col-sm-6">
                                                     <label for="input-name">Имя</label>
                                                     <input class="form-control" id="input-name" value="" name="name" required="" type="text">
                                                     <label for="input-phone">Номер телефона</label>
-                                                    <input class="form-control" id="input-phone" value="" name="phone" required="" type="number">
+                                                    <input class="form-control" id="input-phone" value="" name="phone" required="" type="tel">
                                                     <label for="input-email">E-mail</label>
                                                     <input class="form-control" id="input-email" value="" name="email" required="" type="email">
                                                 </div>
 
                                                 <div class="form-group col-sm-6">
                                                     <label for="input-enquiry">Комментарий (Не обязательно)</label>
-                                                    <textarea class="form-control" id="input-enquiry" rows="10" name="comment" placeholder=""></textarea>
+                                                    <textarea class="form-control" id="input-enquiry" rows="10" name="comment" placeholder="" style="margin-bottom: 30px; resize: none;"></textarea>
                                                     <button type="submit" value="Submit" class="btn btn-primary btnus">Заказать</button>
                                                 </div>
                                             </fieldset>

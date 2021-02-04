@@ -28,12 +28,12 @@
 							<li>
 								<i class="fa fa-phone" aria-hidden="true"></i>
 								<h4>PHONE</h4>
-								<P>+1 (123) 123 12345</P>
+								<P>+998 (93) 331-50-09</P>
 							</li>
 							<li>
 								<i class="fa fa-envelope" aria-hidden="true"></i>
 								<h4>EMAIL</h4>
-								<P>Johndoe01@gmail.com</P>
+								<P>Abdullaev@samrois.uz</P>
 							</li>
 						</ul>
 					</div>
@@ -50,24 +50,26 @@
 						<div class="tab-content">
 							<div class="tab-pane active col-sm-12" id="add-review">
 								<h2>BOOK NOW</h2>
-								<form class="form-horizontal row" method="post">
-									<fieldset>
-										<div class="form-group col-sm-6">
-											<label for="input-name">Name*</label>
-											<input class="form-control" id="input-name" value="" name="jobname" required="" type="text">
-                                            <label for="input-email">Phone*</label>
-                                            <input class="form-control" id="input-email" value="" name="email" required="" type="tel">
-                                            <label for="input-email">E-mail*</label>
-                                            <input class="form-control" id="input-email" value="" name="email" required="" type="email">
-                                        </div>
+								<form class="form-horizontal row" method="POST" action="{% url 'order_create' %}">
+                                            {% csrf_token %}
+                                            <input type="hidden" name="tour" value="{{ tour.id }}">
+                                            <fieldset>
+                                                <div class="form-group col-sm-6">
+                                                    <label for="input-name">Name</label>
+                                                    <input class="form-control" id="input-name" value="" name="name" required="" type="text">
+                                                    <label for="input-phone">Phone</label>
+                                                    <input class="form-control" id="input-phone" value="" name="phone" required="" type="tel">
+                                                    <label for="input-email">E-mail</label>
+                                                    <input class="form-control" id="input-email" value="" name="email" required="" type="email">
+                                                </div>
 
-										<div class="form-group col-sm-6">
-											<label for="input-enquiry">Comment</label>
-											<textarea class="form-control" id="input-enquiry" rows="10" name="enquiry" required="" style="margin-bottom: 30px; resize: none;"></textarea>
-											<button type="submit" value="Submit" class="btn btn-primary btnus">Submit</button>
-										</div>
-									</fieldset>
-								</form>
+                                                <div class="form-group col-sm-6">
+                                                    <label for="input-enquiry">Comment (Not required)</label>
+                                                    <textarea class="form-control" id="input-enquiry" rows="10" name="comment" placeholder="" style="margin-bottom: 30px; resize: none;"></textarea>
+                                                    <button type="submit" value="Submit" class="btn btn-primary btnus">Order now</button>
+                                                </div>
+                                            </fieldset>
+                                        </form>
 							</div>
 						</div>
 					</div>
@@ -93,8 +95,8 @@
                                         </div>
                                         <div class="caption">
                                             <div class="inner">
-                                                <h4>Grand Switerland</h4>
-                                                <p>{{ tour.description_ru }}</p>
+                                                <h4>{{ tour.name_en }}</h4>
+                                                <p>{{ tour.description_en }}</p>
                                             </div>
                                             <div class="text-left">
                                                 <button type="button" onclick="location.href='tour-booking-form.html'">Book Now <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
