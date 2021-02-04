@@ -17,7 +17,7 @@ admin.site.register(Tour, TourConfig)
 
 
 class OrderConfig(admin.ModelAdmin):
-    list_display = ('name', 'phone', 'email')
+    list_display = ('name', 'phone', 'email', 'tour')
 
 
 admin.site.register(Order, OrderConfig)
