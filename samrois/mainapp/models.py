@@ -36,6 +36,7 @@ class Order(models.Model):
     phone = models.IntegerField(verbose_name='Номер телефона', null=True, blank=True)
     email = models.CharField(verbose_name='E-mail', max_length=200, null=True, blank=True)
     comment = models.TextField(null=True, blank=True)
+    tour = models.ForeignKey(Tour, on_delete=models.SET_NULL, verbose_name='Направление', null=True, blank=True)
 
     def __str__(self):
         return self.name
