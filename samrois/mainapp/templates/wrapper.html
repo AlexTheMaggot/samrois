@@ -1,60 +1,66 @@
 {% load static %}
 <!DOCTYPE html>
 {# CheckingHtmlLang #}
-{% if '/en/' in request.path %}
-    <html lang="en-us">
-{% elif '/ko/' in request.path %}
-    <html lang="ko">
-{% else %}
-    <html lang="ru">
-{% endif %}
+    {% if '/en/' in request.path %}
+        <html lang="en-us">
+    {% elif '/ko/' in request.path %}
+        <html lang="ko">
+    {% else %}
+        <html lang="ru">
+    {% endif %}
 {# End CheckingHtmlLang #}
 
-{# Head #}
-<head>
-    {# MetaTags #}
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    {# End MetaTags #}
+    {# Head #}
+        <head>
+            {# MetaTags #}
+                <meta charset="utf-8"/>
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            {# End MetaTags #}
 
-    {# Title #}
-    <title>{% block title %}NO ANY TITLE!{% endblock %}</title>
-    {# End Title #}
+            {# Title #}
+                <title>{% block title %}NO ANY TITLE!{% endblock %}</title>
+            {# End Title #}
 
-    {# Fonts #}
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900%7CPT+Serif:400,400i,700,700i" rel="stylesheet">
-    {# End Fonts #}
+            {# Fonts #}
+                <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900%7CPT+Serif:400,400i,700,700i" rel="stylesheet">
+            {# End Fonts #}
 
-    {# Stylesheet #}
-    <link href="{% static 'css/style.css' %}" rel="stylesheet"/>
-    {# End Stylesheet #}
-</head>
-{# End Head #}
-<body>
-    {# Top #}
-    {% include 'blocks/top.html' %}
-    {# End Top #}
+            {# Stylesheet #}
+                <link href="{% static 'css/style.css' %}" rel="stylesheet"/>
+            {# End Stylesheet #}
 
-    {# Header #}
-    {% include 'blocks/header.html' %}
-    {# End Header #}
+            {# FavIcon #}
+                <link rel="icon" href="{% static 'img/favicon.icoт' %}">
+            {# End Favicon #}
+        </head>
+    {# End Head #}
 
-    {# Menu #}
-    {% include 'blocks/menu.html' %}
-    {# End Menu #}
+    {# Body #}
+        <body>
+            {# Top #}
+                {% include 'blocks/top.html' %}
+            {# End Top #}
 
-    {# Content #}
-    {% block content %}
-    {% endblock %}
-    {# End Content #}
+            {# Header #}
+                {% include 'blocks/header.html' %}
+            {# End Header #}
 
-    {# Footer #}
-    {% include 'blocks/footer.html' %}
-    {# End Footer #}
+            {# Menu #}
+                {% include 'blocks/menu.html' %}
+            {# End Menu #}
 
-    {# Scripts #}
-    {% include 'blocks/scripts.html' %}
-    {# End Scripts #}
-</body>
+            {# Content #}
+                {% block content %}{% endblock %}
+            {# End Content #}
+
+            {# Footer #}
+                {% include 'blocks/footer.html' %}
+            {# End Footer #}
+
+            {# Scripts #}
+                {% include 'blocks/scripts.html' %}
+            {# End Scripts #}
+        </body>
+    {# End Body #}
 </html>
