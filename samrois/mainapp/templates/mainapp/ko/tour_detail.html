@@ -50,7 +50,7 @@
 						<div class="tab-content">
 							<div class="tab-pane active col-sm-12" id="add-review">
 								<h2>지금 예약</h2>
-								<form class="form-horizontal row" method="POST" action="{% url 'order_create' %}">
+								<form class="form-horizontal row" method="POST" action="{% url 'ko_order_create' %}">
                                             {% csrf_token %}
                                             <input type="hidden" name="tour" value="{{ tour.id }}">
                                             <fieldset>
