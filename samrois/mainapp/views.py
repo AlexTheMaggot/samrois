@@ -1,7 +1,18 @@
+# ExternalImports
+import telebot
+# End ExternalImports
+
 # DjangoImports
 from django.shortcuts import render, redirect, get_object_or_404
-from .models import Slide, Tour, Order
 # End DjangoImports
+
+# InternalImports
+from .models import Slide, Tour, Order
+# End InternalImports
+
+# BotApi
+bot = telebot.TeleBot('1658154978:AAGnajG-o5cDpCvWU53qyJXKkopnQgTpzfc')
+# End BotApi
 
 
 # RedirectToIndexPage
@@ -80,14 +91,27 @@ def order_add(request):
             order = Order(name=name, phone=phone, email=email, comment=comment, tour=tour)
         else:
             order = Order(name=name, phone=phone, email=email, comment=comment, tour=None)
-
         order.save()
+
+        message = 'Новая заявка!\r\n\r\nИмя:\r\n' + name + '\r\n\r\nНомер телефона:\r\n' + phone
+        message += '\r\n\r\nE-mail:\r\n' + email
+
+        if 'tour' in request.POST:
+            tour_object = Tour.objects.get(id=request.POST['tour'])
+            tour = tour_object.name_ru
+            message += '\r\n\r\nНаправление:\r\n' + tour
+        if comment != '':
+            message += '\r\n\r\nКомментарий:\r\n' + comment
+
+        bot.send_message(-1001163956964, message)
+
         if '/en/' in request.path:
             url = 'en_thank_you'
         elif '/ko/' in request.path:
             url = 'ko_thank_you'
         else:
             url = 'ru_thank_you'
+
         return redirect(url)
 # End OrderCreate
 
