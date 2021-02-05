@@ -82,7 +82,13 @@ def order_add(request):
             order = Order(name=name, phone=phone, email=email, comment=comment, tour=None)
 
         order.save()
-        return redirect('ru_index')
+        if '/en/' in request.path:
+            url = 'en_thank_you'
+        elif '/ko/' in request.path:
+            url = 'ko_thank_you'
+        else:
+            url = 'ru_thank_you'
+        return redirect(url)
 # End OrderCreate
 
 
