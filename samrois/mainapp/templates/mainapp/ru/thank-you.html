@@ -1,0 +1,35 @@
+{% extends 'wrapper.html' %}
+{% load static %}
+{% block title %}SRTour - Спасибо{% endblock %}
+{% block content %}
+
+<!-- breadcrumb start here -->
+<div class="bread-crumb">
+	<div class="container">
+		<h2>Спасибо</h2>
+		<ul class="list-inline">
+			<li><a href="{% url 'ru_index' %}">Главная</a></li>
+			<li><a href="{% url 'ru_thank_you' %}">Спасибо</a></li>
+		</ul>
+	</div>
+</div>
+<!-- breadcrumb end here -->
+
+<!-- main container start here -->
+<div class="error">
+	<img src="{% static 'img/bg-image1.jpg' %}" class="img-responsive" alt="Спасибо"/>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="matter">
+					<p>Спасибо!</p>
+					<span>Мы свяжемся с вами<br> через некоторе время </span>
+                    <br>
+					<button class="btn-primary" type="button" onclick="location.href='/ru/'"><i class="fa fa-reply-all" aria-hidden="true"></i> На главную</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- main container end here -->
+{% endblock %}

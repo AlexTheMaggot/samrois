@@ -1,0 +1,35 @@
+{% extends 'wrapper.html' %}
+{% load static %}
+{% block title %}SRTour - Thank you{% endblock %}
+{% block content %}
+
+<!-- breadcrumb start here -->
+<div class="bread-crumb">
+	<div class="container">
+		<h2>Thank you</h2>
+		<ul class="list-inline">
+			<li><a href="{% url 'en_index' %}">home</a></li>
+			<li><a href="{% url 'en_thank_you' %}">Thank you</a></li>
+		</ul>
+	</div>
+</div>
+<!-- breadcrumb end here -->
+
+<!-- main container start here -->
+<div class="error">
+	<img src="{% static 'img/bg-image1.jpg' %}" class="img-responsive" alt="Thank You" title="bg-image1" />
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="matter">
+					<p>Thank you!</p>
+					<span>We'll have contact with you<br> in some time </span>
+                    <br>
+					<button class="btn-primary" type="button" onclick="location.href='/en/'"><i class="fa fa-reply-all" aria-hidden="true"></i> Go to Homepage</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- main container end here -->
+{% endblock %}
