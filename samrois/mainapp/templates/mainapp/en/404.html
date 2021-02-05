@@ -1,0 +1,34 @@
+{% extends 'wrapper.html' %}
+{% load static %}
+{% block title %}404 - Not Found{% endblock %}
+{% block content %}
+    {# Breadcrumbs #}
+        <div class="bread-crumb">
+            <div class="container">
+                <h2>Error 404</h2>
+                <ul class="list-inline">
+                    <li><a href="{% url 'en_index' %}">Home</a></li>
+                    <li><a href="#">Error 404</a></li>
+                </ul>
+            </div>
+        </div>
+    {# End BreadCrumbs #}
+
+    {# Content #}
+        <div class="error">
+            <img src="{% static 'img/bg-image1.jpg' %}" class="img-responsive" alt="404"/>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="matter">
+                            <h2>404</h2>
+                            <p>Not found !</p>
+                            <span>Sorry, we couldn't find the page<br> you looking for </span>
+                            <button class="btn-primary" type="button" onclick="location.href='/en/'"><i class="fa fa-reply-all" aria-hidden="true"></i> Go to homepage</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {# End Content #}
+{% endblock %}
