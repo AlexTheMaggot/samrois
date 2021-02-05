@@ -15,6 +15,18 @@ bot = telebot.TeleBot('1658154978:AAGnajG-o5cDpCvWU53qyJXKkopnQgTpzfc')
 # End BotApi
 
 
+# 404Handler
+def custom_404(request, exception):
+    if 'en' in request.path:
+        template = 'mainapp/en/404.html'
+    elif 'ko' in request.path:
+        template = 'mainapp/ko/404.html'
+    else:
+        template = 'mainapp/ru/404.html'
+    return render(request, template)
+# End 404Handler
+
+
 # RedirectToIndexPage
 def redirect_to_index(request):
     return redirect('ru_index')
