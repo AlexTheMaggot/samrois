@@ -1,13 +1,13 @@
 {% extends 'wrapper.html' %}
 {% load static %}
-{% block title %}SRTour - Главная{% endblock %}
+{% block title %}SRTour - Uy{% endblock %}
 {% block content %}
 {# Slider #}
 <div class="slice">
 		<div class="slideshow owl-carousel">
             {% for slide in slides %}
                 <div class="item">
-				    <img src="{{ slide.image.url }}" alt="Слайд" class="img-responsive"/>
+				    <img src="{{ slide.image.url }}" alt="Slayd" class="img-responsive"/>
 			    </div>
             {% endfor %}
 		</div>
@@ -19,8 +19,8 @@
 	<div class="container">
 		<div class="row">
 			<div class="places">
-				<h1>Популярные направления</h1>
-				<p>Каждый город хранит свою историю и свою атмосферу прошлого.</p>
+				<h1>Ommabop yo'nalishlar</h1>
+				<p>Har bir shahar o'z tarixini va o'tmish muhitini saqlaydi.</p>
 				<hr>
 			</div>
 			<div class="tab-content tour">
@@ -29,19 +29,19 @@
                         <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
                             <div class="product-thumb">
                                 <div class="image">
-                                    <img src="{{ tour.img_list.url }}" alt="{{tour.name_ru}}" class="img-responsive" />
+                                    <img src="{{ tour.img_list.url }}" alt="{{tour.name_uz}}" class="img-responsive" />
                                     <div class="matter">
-                                        <p>{{ tour.name_ru }}  {# <span>{{ tour.price }} UZS</span> #}</p>
+                                        <p>{{ tour.name_uz }}  {# <span>{{ tour.price }} UZS</span> #}</p>
                                     </div>
                                 </div>
                                 <div class="caption">
                                     <div class="inner">
-                                        <h4>{{ tour.name_ru }}</h4>
-                                        <p>{{ tour.description_ru }}</p>
+                                        <h4>{{ tour.name_uz }}</h4>
+                                        <p>{{ tour.description_uz }}</p>
                                     </div>
                                     <div class="text-left">
-                                        <button type="button" onclick="location.href='/ru/tours/{{ tour.id }}'">Заказать <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
-                                        <button type="button" onclick="location.href='/ru/tours/{{ tour.id }}'">Узнать больше <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
+                                        <button type="button" onclick="location.href='/uz/tours/{{ tour.id }}'">Buyurtma qilish <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
+                                        <button type="button" onclick="location.href='/uz/tours/{{ tour.id }}'">Qo'shimcha ma'lumot olish uchun <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
                                     </div>
                                 </div>
                             </div>
@@ -49,7 +49,7 @@
                     {% endfor %}
                     <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
                         <div class="text-center">
-                            <button class="btn-primary" type="button" onclick="location.href='{% url 'ru_tour_list' %}'">Все туры <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
+                            <button class="btn-primary" type="button" onclick="location.href='{% url 'uz_tour_list' %}'">Barcha ekskursiyalar <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
                         </div>
                     </div>
 				</div>
@@ -64,8 +64,8 @@
 	<div class="container">
 		<div class="row">
 			<div class="places">
-				<h1>Видео-обзор</h1>
-				<p>Рекомендуем к просмотру, после этого видео Вы захотите посетить нашу страну.</p>
+				<h1>Videoni ko'rib chiqish</h1>
+				<p>Ko'rish uchun tavsiya etilgan, ushbu videodan keyin siz bizning mamlakatga tashrif buyurishni xohlaysiz.</p>
 				<hr>
                 <div class="text-center">
                 <iframe width="100%" height="400" src="https://www.youtube.com/embed/csjkd06KF2w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -81,8 +81,8 @@
 	<div class="container">
 		<div class="row">
 			<div class="places">
-				<h1>Галерея</h1>
-				<p>Фотографии которые передают всю суть нашей страны</p>
+				<h1>Galereya</h1>
+				<p>Mamlakatimizning butun mohiyatini aks ettiruvchi fotosuratlar</p>
 				<hr>
 			</div>
 		</div>
@@ -150,7 +150,7 @@
 		</div>
 
 		<div class="text-center">
-			<button class="btn-primary" type="button" onclick="location.href='#'">Все фото <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
+			<button class="btn-primary" type="button" onclick="location.href='#'">Barcha fotosuratlar <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
 		</div>
 	</div>
 </div>

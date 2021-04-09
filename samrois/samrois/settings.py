@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'b7^6^0=__h6)697ys8how2!0t4$)8n4rj34pesw5*+_xky89bh'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['*', ]
+ALLOWED_HOSTS = ['samrois.uz', ]
 
 
 # Application definition
@@ -75,10 +75,29 @@ WSGI_APPLICATION = 'samrois.wsgi.application'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 DATABASES = {
+
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+
+        'ENGINE': 'django.db.backends.mysql',
+
+        'NAME': 'a0451711_samrois',
+
+        'USER': 'a0451711_alexthemaggot',
+
+        'PASSWORD': 'chupacabrus',
+
+        'HOST': 'localhost',
+
+        'OPTIONS': {
+
+               'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+
+               'charset': 'utf8mb4',
+
+        }
+
     }
+
 }
 
 

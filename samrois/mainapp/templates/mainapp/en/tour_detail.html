@@ -61,6 +61,11 @@
                                                     <input class="form-control" id="input-phone" value="" name="phone" required="" type="tel">
                                                     <label for="input-email">E-mail</label>
                                                     <input class="form-control" id="input-email" value="" name="email" required="" type="email">
+                                                    <label for="card">Payment</label>
+                                                    <input class="form-control" id="card" value="" type="text" placeholder="Card number">
+                                                    <input class="form-control" value="" type="text" placeholder="MM/YY">
+                                                    <input class="form-control" value="" type="text" placeholder="CVC">
+                                                    <input class="form-control" value="" type="text" placeholder="Cardowner">
                                                 </div>
 
                                                 <div class="form-group col-sm-6">
@@ -99,7 +104,7 @@
                                                 <p>{{ tour.description_en }}</p>
                                             </div>
                                             <div class="text-left">
-                                                <button type="button" onclick="location.href='tour-booking-form.html'">Book Now <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
+                                                <button type="button" onclick="location.href='/en/tours/{{ tour.id }}'">Book Now <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
                                                 <button type="button" onclick="location.href='/en/tours/{{ tour.id }}'">View More <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
                                             </div>
                                         </div>

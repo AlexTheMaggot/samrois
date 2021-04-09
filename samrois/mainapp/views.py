@@ -17,10 +17,12 @@ bot = telebot.TeleBot('1658154978:AAGnajG-o5cDpCvWU53qyJXKkopnQgTpzfc')
 
 # 404Handler
 def custom_404(request, exception):
-    if 'en' in request.path:
+    if '/en/' in request.path:
         template = 'mainapp/en/404.html'
-    elif 'ko' in request.path:
+    elif '/ko/' in request.path:
         template = 'mainapp/ko/404.html'
+    elif '/uz/' in request.path:
+        template = 'mainapp/uz/404.html'
     else:
         template = 'mainapp/ru/404.html'
     return render(request, template)
@@ -46,6 +48,8 @@ def index(request):
         template = 'mainapp/en/index.html'
     elif '/ko/' in request.path:
         template = 'mainapp/ko/index.html'
+    elif '/uz/' in request.path:
+        template = 'mainapp/uz/index.html'
     else:
         template = 'mainapp/ru/index.html'
     # End CheckLanguage
@@ -64,6 +68,8 @@ def tour_list(request):
         template = 'mainapp/en/tour_list.html'
     elif '/ko/' in request.path:
         template = 'mainapp/ko/tour_list.html'
+    elif '/uz/' in request.path:
+        template = 'mainapp/uz/tour_list.html'
     else:
         template = 'mainapp/ru/tour_list.html'
     # End CheckLanguage
@@ -84,6 +90,8 @@ def tour_detail(request, tour_id):
         template = 'mainapp/en/tour_detail.html'
     elif '/ko/' in request.path:
         template = 'mainapp/ko/tour_detail.html'
+    elif '/uz/' in request.path:
+        template = 'mainapp/uz/tour_detail.html'
     else:
         template = 'mainapp/ru/tour_detail.html'
     # End CheckLanguage
@@ -121,6 +129,8 @@ def order_add(request):
             url = 'en_thank_you'
         elif '/ko/' in request.path:
             url = 'ko_thank_you'
+        elif '/uz/' in request.path:
+            url = 'uz_thank_you'
         else:
             url = 'ru_thank_you'
 
@@ -134,6 +144,8 @@ def thank_you(request):
         template = 'mainapp/en/thank-you.html'
     elif '/ko/' in request.path:
         template = 'mainapp/ko/thank-you.html'
+    elif '/uz/' in request.path:
+        template = 'mainapp/uz/thank-you.html'
     else:
         template = 'mainapp/ru/thank-you.html'
     return render(request, template)

@@ -1,16 +1,16 @@
 {% extends 'wrapper.html' %}
 
-{% block title %}{{ tour.name_ru }}{% endblock %}
+{% block title %}{{ tour.name_uz }}{% endblock %}
 
 {% block content %}
     {# Breadcrumb #}
         <div class="bread-crumb">
             <div class="container">
-                <h2>{{ tour.name_ru }}</h2>
+                <h2>{{ tour.name_uz }}</h2>
                 <ul class="list-inline">
-                    <li><a href="{% url 'ru_index' %}">Главная</a></li>
-                    <li><a href="{% url 'ru_tour_list' %}">Направления</a></li>
-                    <li><a href="{% url 'ru_tour_detail' tour.id %}">{{ tour.name_ru }}</a></li>
+                    <li><a href="{% url 'uz_index' %}">Uy</a></li>
+                    <li><a href="{% url 'uz_tour_list' %}">Yo'nalishlar</a></li>
+                    <li><a href="{% url 'uz_tour_detail' tour.id %}">{{ tour.name_uz }}</a></li>
                 </ul>
             </div>
         </div>
@@ -22,12 +22,12 @@
                 <div class="row">
                     <div class="col-sm-3">
                         <div class="left-box">
-                            <h6>Консультация</h6>
+                            <h6>Konsultatsiya</h6>
                             <div class="talk">
                                 <ul class="list-unstyled">
                                     <li>
                                         <i class="fa fa-phone" aria-hidden="true"></i>
-                                        <h4>Телефон</h4>
+                                        <h4>Telefon</h4>
                                         <P>+998 (93) 331-50-09</P>
                                     </li>
                                     <li>
@@ -43,36 +43,36 @@
                         <div class="row">
                             <div class="col-sm-12">
                                 <div class="thumb">
-                                    <img src="{{ tour.img_detail.url }}" alt="{{ tour.name_ru }}" class="img-responsive"/>
+                                    <img src="{{ tour.img_detail.url }}" alt="{{ tour.name_uz }}" class="img-responsive"/>
                                 </div>
                             </div>
 
                             <div class="tour-detail col-sm-12">
                                 <div class="tab-content">
                                     <div class="tab-pane active col-sm-12" id="add-review">
-                                        <h2>ОФОРМИТЬ ЗАКАЗ</h2>
-                                        <form class="form-horizontal row" method="POST" action="{% url 'ru_order_create' %}">
+                                        <h2>TEKSHIRIB KO'RMOQ</h2>
+                                        <form class="form-horizontal row" method="POST" action="{% url 'uz_order_create' %}">
                                             {% csrf_token %}
                                             <input type="hidden" name="tour" value="{{ tour.id }}">
                                             <fieldset>
                                                 <div class="form-group col-sm-6">
-                                                    <label for="input-name">Имя</label>
+                                                    <label for="input-name">Ism</label>
                                                     <input class="form-control" id="input-name" value="" name="name" required="" type="text">
-                                                    <label for="input-phone">Номер телефона</label>
+                                                    <label for="input-phone">Telefon raqami</label>
                                                     <input class="form-control" id="input-phone" value="" name="phone" required="" type="tel">
                                                     <label for="input-email">E-mail</label>
                                                     <input class="form-control" id="input-email" value="" name="email" required="" type="email">
-                                                    <label for="card">Оплата</label>
-                                                    <input class="form-control" id="card" value="" type="text" placeholder="Номер карты">
-                                                    <input class="form-control" value="" type="text" placeholder="ММ/ГГ">
+                                                    <label for="card">To'lov</label>
+                                                    <input class="form-control" id="card" value="" type="text" placeholder="Karta raqami">
+                                                    <input class="form-control" value="" type="text" placeholder="OO/YY">
                                                     <input class="form-control" value="" type="text" placeholder="CVC">
-                                                    <input class="form-control" value="" type="text" placeholder="ФИО">
+                                                    <input class="form-control" value="" type="text" placeholder="To'liq ism">
                                                 </div>
 
                                                 <div class="form-group col-sm-6">
-                                                    <label for="input-enquiry">Комментарий (Не обязательно)</label>
+                                                    <label for="input-enquiry">Izoh (ixtiyoriy)</label>
                                                     <textarea class="form-control" id="input-enquiry" rows="10" name="comment" placeholder="" style="margin-bottom: 30px; resize: none;"></textarea>
-                                                    <button type="submit" value="Submit" class="btn btn-primary btnus">Заказать</button>
+                                                    <button type="submit" value="Submit" class="btn btn-primary btnus">Buyurtma qilish</button>
                                                 </div>
                                             </fieldset>
                                         </form>
@@ -86,7 +86,7 @@
 
                         <div class="row tour">
                             <div class="places related">
-                                <h1>Другие направления</h1>
+                                <h1>Boshqa yo'nalishlar</h1>
                                 <hr>
                             </div>
                             <div class="owl-carousel" id="related-pro">
@@ -95,19 +95,19 @@
                                         <div class="col-xs-12">
                                             <div class="product-thumb">
                                                 <div class="image">
-                                                    <img src="{{ tour.img_list.url }}" alt="{{ tour.name_ru }}" class="img-responsive" />
+                                                    <img src="{{ tour.img_list.url }}" alt="{{ tour.name_uz }}" class="img-responsive" />
                                                     <div class="matter">
                                                         <p>{{ tour.name_ru }}  {# <span>{{ tour.price }} UZS</span> #}</p>
                                                     </div>
                                                 </div>
                                                 <div class="caption">
                                                     <div class="inner">
-                                                        <h4>{{ tour.name_ru }}</h4>
-                                                        <p>{{ tour.description_ru }}</p>
+                                                        <h4>{{ tour.name_uz }}</h4>
+                                                        <p>{{ tour.description_uz }}</p>
                                                     </div>
                                                     <div class="text-left">
-                                                        <button type="button" onclick="location.href='/ru/tours/{{ tour.id }}'">Заказать <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
-                                                        <button type="button" onclick="location.href='/ru/tours/{{ tour.id }}'">Узнать больше <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
+                                                        <button type="button" onclick="location.href='/uz/tours/{{ tour.id }}'">Buyurtma qilish <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
+                                                        <button type="button" onclick="location.href='/uz/tours/{{ tour.id }}'">Qo'shimcha ma'lumot olish uchun <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
                                                     </div>
                                                 </div>
                                             </div>

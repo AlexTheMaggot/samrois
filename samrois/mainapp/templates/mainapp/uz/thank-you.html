@@ -1,0 +1,35 @@
+{% extends 'wrapper.html' %}
+{% load static %}
+{% block title %}SRTour - Rahmat{% endblock %}
+{% block content %}
+
+<!-- breadcrumb start here -->
+<div class="bread-crumb">
+	<div class="container">
+		<h2>Rahmat</h2>
+		<ul class="list-inline">
+			<li><a href="{% url 'uz_index' %}">Uy</a></li>
+			<li><a href="{% url 'uz_thank_you' %}">Rahmat</a></li>
+		</ul>
+	</div>
+</div>
+<!-- breadcrumb end here -->
+
+<!-- main container start here -->
+<div class="error">
+	<img src="{% static 'img/bg-image1.jpg' %}" class="img-responsive" alt="Rahmat"/>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="matter">
+					<p>Rahmat!</p>
+					<span>Biz siz bilan bog'lanamiz<br> birozdan so'ng </span>
+                    <br>
+					<button class="btn-primary" type="button" onclick="location.href='/uz/'"><i class="fa fa-reply-all" aria-hidden="true"></i> Asosiysi</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- main container end here -->
+{% endblock %}

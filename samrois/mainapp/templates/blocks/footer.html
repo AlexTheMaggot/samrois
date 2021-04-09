@@ -1,134 +1,195 @@
 {% load static %}
 <footer>
-	<div class="container">
-		<div class="row padd-b">
-			<div class="col-sm-3">
-				<img src="{% static 'img/logo.png' %}" class="img-responsive" alt="foot-logo" title="foot-logo" />
-				{% if '/en/' in request.path %}
-                    <p class="des">Our agency will arrange comfortable, interesting and very informative tours for you, for your friends and family.</p>
+    <div class="container">
+        <div class="row padd-b">
+            <div class="col-sm-3">
+                <img src="{% static 'img/logo.png' %}" class="img-responsive" alt="foot-logo" title="foot-logo"/>
+                {% if '/en/' in request.path %}
+                    <p class="des">Our agency will arrange comfortable, interesting and very informative tours for you,
+                        for your friends and family.</p>
                 {% elif '/ko/' in request.path %}
                     <p class="des">우리 에이전시는 친구와 가족을 위해 편안하고 흥미롭고 유익한 여행을 준비합니다.</p>
+                {% elif '/uz/' in request.path %}
+                    <p class="des">Agentligimiz siz uchun, do'stlaringiz va oilangiz uchun qulay, qiziqarli va juda
+                        ma'lumotli sayohatlar uyushtiradi..</p>
                 {% else %}
-                    <p class="des">Наше агентство устроит комфортные, интересные и очень познавательные туры для Вас, для ваших друзей и семьи.</p>
+                    <p class="des">Наше агентство устроит комфортные, интересные и очень познавательные туры для Вас,
+                        для ваших друзей и семьи.</p>
                 {% endif %}
-			</div>
+            </div>
             {% if '/en/' in request.path %}
                 <div class="col-sm-3 contact">
-				<h3>Contact us</h3>
-				<ul class="list-inline">
-					<li>
-						<div class="inner"><i class="fa fa-home" aria-hidden="true"></i>Address</div>
-						<div class="in"> : 665 "Qozi Ariq" mahalla, Samarkand, Uzbekistan</div>
-					</li>
-					<li>
-						<div class="inner"><i class="fa fa-phone" aria-hidden="true"></i>Phone No.</div>
-						<div class="in"> : +998 (93) 331-50-09</div>
-					</li>
-					<li>
-						<div class="inner"><i class="fa fa-envelope" aria-hidden="true"></i>Email</div>
-						<div class="in"> : Abdullaev@samrois.uz</div>
-					</li>
-				</ul>
-			</div>
+                    <h3>Contact us</h3>
+                    <ul class="list-inline">
+                        <li>
+                            <div class="inner"><i class="fa fa-home" aria-hidden="true"></i>Address</div>
+                            <div class="in"> : 665 "Qozi Ariq" mahalla, Samarkand, Uzbekistan</div>
+                        </li>
+                        <li>
+                            <div class="inner"><i class="fa fa-phone" aria-hidden="true"></i>Phone No.</div>
+                            <div class="in"> : +998 (93) 331-50-09</div>
+                        </li>
+                        <li>
+                            <div class="inner"><i class="fa fa-envelope" aria-hidden="true"></i>Email</div>
+                            <div class="in"> : Abdullaev@samrois.uz</div>
+                        </li>
+                    </ul>
+                </div>
                 <div class="col-sm-3 info">
-				<h3>Information</h3>
-				<ul class="list-inline">
-					<li><a href="{% url 'en_index' %}"><i class="fa fa-angle-right" aria-hidden="true"></i>Home</a></li>
-					<li><a href="{% url 'en_tour_list' %}"><i class="fa fa-angle-right" aria-hidden="true"></i>Tours</a></li>
-				</ul>
-			</div>
+                    <h3>Information</h3>
+                    <ul class="list-inline">
+                        <li><a href="{% url 'en_index' %}"><i class="fa fa-angle-right" aria-hidden="true"></i>Home</a>
+                        </li>
+                        <li><a href="{% url 'en_tour_list' %}"><i class="fa fa-angle-right" aria-hidden="true"></i>Tours</a>
+                        </li>
+                    </ul>
+                </div>
                 <div class="col-sm-3 insta">
-				<h3>Location</h3>
-				<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A464a32ceecd3b08270c420e42e2d8acbfac7b60c681da56cc47070a47f4e21a8&amp;source=constructor" width="100%" height="200" frameborder="0"></iframe>
-			</div>
+                    <h3>Location</h3>
+                    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A464a32ceecd3b08270c420e42e2d8acbfac7b60c681da56cc47070a47f4e21a8&amp;source=constructor"
+                            width="100%" height="200" frameborder="0"></iframe>
+                </div>
             {% elif '/ko/' in request.path %}
                 <div class="col-sm-3 contact">
-				<h3>문의하기</h3>
-				<ul class="list-inline">
-					<li>
-						<div class="inner"><i class="fa fa-home" aria-hidden="true"></i>주소</div>
-						<div class="in"> : 665 "Qozi Ariq" 사마르 칸트, 우즈베키스탄</div>
-					</li>
-					<li>
-						<div class="inner"><i class="fa fa-phone" aria-hidden="true"></i>전화 번호</div>
-						<div class="in"> : +998 (93) 331-50-09</div>
-					</li>
-					<li>
-						<div class="inner"><i class="fa fa-envelope" aria-hidden="true"></i>이메일</div>
-						<div class="in"> : Abdullaev@samrois.uz</div>
-					</li>
-				</ul>
-			</div>
+                    <h3>문의하기</h3>
+                    <ul class="list-inline">
+                        <li>
+                            <div class="inner"><i class="fa fa-home" aria-hidden="true"></i>주소</div>
+                            <div class="in"> : 665 "Qozi Ariq" 사마르 칸트, 우즈베키스탄</div>
+                        </li>
+                        <li>
+                            <div class="inner"><i class="fa fa-phone" aria-hidden="true"></i>전화 번호</div>
+                            <div class="in"> : +998 (93) 331-50-09</div>
+                        </li>
+                        <li>
+                            <div class="inner"><i class="fa fa-envelope" aria-hidden="true"></i>이메일</div>
+                            <div class="in"> : Abdullaev@samrois.uz</div>
+                        </li>
+                    </ul>
+                </div>
                 <div class="col-sm-3 info">
-				<h3>정보</h3>
-				<ul class="list-inline">
-					<li><a href="{% url 'ko_index' %}"><i class="fa fa-angle-right" aria-hidden="true"></i>집</a></li>
-					<li><a href="{% url 'ko_tour_list' %}"><i class="fa fa-angle-right" aria-hidden="true"></i>지도</a></li>
-				</ul>
-			</div>
+                    <h3>정보</h3>
+                    <ul class="list-inline">
+                        <li><a href="{% url 'ko_index' %}"><i class="fa fa-angle-right" aria-hidden="true"></i>집</a>
+                        </li>
+                        <li><a href="{% url 'ko_tour_list' %}"><i class="fa fa-angle-right"
+                                                                  aria-hidden="true"></i>지도</a></li>
+                    </ul>
+                </div>
                 <div class="col-sm-3 insta">
-				<h3>위치</h3>
-				<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A464a32ceecd3b08270c420e42e2d8acbfac7b60c681da56cc47070a47f4e21a8&amp;source=constructor" width="100%" height="200" frameborder="0"></iframe>
-			</div>
+                    <h3>위치</h3>
+                    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A464a32ceecd3b08270c420e42e2d8acbfac7b60c681da56cc47070a47f4e21a8&amp;source=constructor"
+                            width="100%" height="200" frameborder="0"></iframe>
+                </div>
+            {% elif '/uz/' in request.path %}
+                <div class="col-sm-3 contact">
+                    <h3>Kontaktlar</h3>
+                    <ul class="list-inline">
+                        <li>
+                            <div class="inner"><i class="fa fa-home" aria-hidden="true"></i>Manzil</div>
+                            <div class="in"> : "Qozi Ariq" mahallasi, 665-bino, Samarqand, O'zbekiston</div>
+                        </li>
+                        <li>
+                            <div class="inner"><i class="fa fa-phone" aria-hidden="true"></i>Telefon</div>
+                            <div class="in"> : +998 (93) 331-50-09</div>
+                        </li>
+                        <li>
+                            <div class="inner"><i class="fa fa-envelope" aria-hidden="true"></i>E-mail</div>
+                            <div class="in"> : Abdullaev@samrois.uz</div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-3 info">
+                    <h3>Sayt xaritasi</h3>
+                    <ul class="list-inline">
+                        <li><a href="{% url 'uz_index' %}"><i class="fa fa-angle-right" aria-hidden="true"></i>Asosiy</a>
+                        </li>
+                        <li><a href="{% url 'uz_tour_list' %}"><i class="fa fa-angle-right"
+                                                                  aria-hidden="true"></i>Yo'nalishlar</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3 insta">
+                    <h3>Manzil</h3>
+                    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A464a32ceecd3b08270c420e42e2d8acbfac7b60c681da56cc47070a47f4e21a8&amp;source=constructor"
+                            width="100%" height="200" frameborder="0"></iframe>
+                </div>
             {% else %}
                 <div class="col-sm-3 contact">
-				<h3>Контакты</h3>
-				<ul class="list-inline">
-					<li>
-						<div class="inner"><i class="fa fa-home" aria-hidden="true"></i>Адрес</div>
-						<div class="in"> : Махалля "Qozi Ariq", дом 665, Самарканд, Узбекистан</div>
-					</li>
-					<li>
-						<div class="inner"><i class="fa fa-phone" aria-hidden="true"></i>Телефон</div>
-						<div class="in"> : +998 (93) 331-50-09</div>
-					</li>
-					<li>
-						<div class="inner"><i class="fa fa-envelope" aria-hidden="true"></i>Эл. Почта</div>
-						<div class="in"> : Abdullaev@samrois.uz</div>
-					</li>
-				</ul>
-			</div>
+                    <h3>Контакты</h3>
+                    <ul class="list-inline">
+                        <li>
+                            <div class="inner"><i class="fa fa-home" aria-hidden="true"></i>Адрес</div>
+                            <div class="in"> : Махалля "Qozi Ariq", дом 665, Самарканд, Узбекистан</div>
+                        </li>
+                        <li>
+                            <div class="inner"><i class="fa fa-phone" aria-hidden="true"></i>Телефон</div>
+                            <div class="in"> : +998 (93) 331-50-09</div>
+                        </li>
+                        <li>
+                            <div class="inner"><i class="fa fa-envelope" aria-hidden="true"></i>Эл. Почта</div>
+                            <div class="in"> : Abdullaev@samrois.uz</div>
+                        </li>
+                    </ul>
+                </div>
                 <div class="col-sm-3 info">
-				<h3>Карта сайта</h3>
-				<ul class="list-inline">
-					<li><a href="{% url 'ru_index' %}"><i class="fa fa-angle-right" aria-hidden="true"></i>Главная</a></li>
-					<li><a href="{% url 'ru_tour_list' %}"><i class="fa fa-angle-right" aria-hidden="true"></i>Направления</a></li>
-				</ul>
-			</div>
+                    <h3>Карта сайта</h3>
+                    <ul class="list-inline">
+                        <li><a href="{% url 'ru_index' %}"><i class="fa fa-angle-right"
+                                                              aria-hidden="true"></i>Главная</a></li>
+                        <li><a href="{% url 'ru_tour_list' %}"><i class="fa fa-angle-right" aria-hidden="true"></i>Направления</a>
+                        </li>
+                    </ul>
+                </div>
                 <div class="col-sm-3 insta">
-				<h3>Локация</h3>
-				<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A464a32ceecd3b08270c420e42e2d8acbfac7b60c681da56cc47070a47f4e21a8&amp;source=constructor" width="100%" height="200" frameborder="0"></iframe>
-			</div>
+                    <h3>Локация</h3>
+                    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A464a32ceecd3b08270c420e42e2d8acbfac7b60c681da56cc47070a47f4e21a8&amp;source=constructor"
+                            width="100%" height="200" frameborder="0"></iframe>
+                </div>
             {% endif %}
-		</div>
-		<div class="row">
-			<div class="col-sm-12">
-				<div class="powered">
-					<div class="col-sm-6 padd0">
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="powered">
+                    <div class="col-sm-6 padd0">
                         {% if '/en/' in request.path %}
                             <p>© Copyright 2021. <span>SRTour</span></p>
                         {% elif '/ko/' in request.path %}
                             <p>© 저작권 2021. <span>SRTour</span></p>
+                        {% elif '/uz/' in request.path %}
+                            <p>© Barcha huquqlar himoyalangan 2021. <span>SRTour</span></p>
                         {% else %}
                             <p>© Все права защищены 2021. <span>SRTour</span></p>
                         {% endif %}
-					</div>
-					<div class="col-sm-6 padd0 text-right">
-						<div class="social-icon">
-							<ul class="list-inline">
-								<li><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-								<li><a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-								<li><a href="https://plus.google.com/" target="_blank"><i class="social_googleplus" aria-hidden="true"></i></a></li>
-								<li><a href="https://in.linkedin.com/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-								<li><a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-								<li><a href="https://in.pinterest.com/" target="_blank"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
-								<li><a href="https://photos.google.com/" target="_blank"><i class="social_picassa"></i></a></li>
-								<li><a href="https://www.youtube.com/?gl=IN" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+                    </div>
+                    <div class="col-sm-6 padd0 text-right">
+                        <div class="social-icon">
+                            <ul class="list-inline">
+                                <li><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"
+                                                                                           aria-hidden="true"></i></a>
+                                </li>
+                                <li><a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter"
+                                                                                      aria-hidden="true"></i></a></li>
+                                <li><a href="https://plus.google.com/" target="_blank"><i class="social_googleplus"
+                                                                                          aria-hidden="true"></i></a>
+                                </li>
+                                <li><a href="https://in.linkedin.com/" target="_blank"><i class="fa fa-linkedin"
+                                                                                          aria-hidden="true"></i></a>
+                                </li>
+                                <li><a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"
+                                                                                            aria-hidden="true"></i></a>
+                                </li>
+                                <li><a href="https://in.pinterest.com/" target="_blank"><i class="fa fa-pinterest-p"
+                                                                                           aria-hidden="true"></i></a>
+                                </li>
+                                <li><a href="https://photos.google.com/" target="_blank"><i class="social_picassa"></i></a>
+                                </li>
+                                <li><a href="https://www.youtube.com/?gl=IN" target="_blank"><i
+                                        class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </footer>

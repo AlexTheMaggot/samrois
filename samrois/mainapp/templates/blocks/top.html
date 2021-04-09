@@ -8,6 +8,8 @@
                             <a href="{% url 'en_index' %}">Welcome to SRTour</a>
                         {% elif '/ko/' in request.path %}
                             <a href="{% url 'ko_index' %}">에 오신 것을 환영합니다 SRTour</a>
+                        {% elif '/uz/' in request.path %}
+                            <a href="{% url 'uz_index' %}">SRTourga Xush kelibsiz</a>
                         {% else %}
                             <a href="{% url 'ru_index' %}">Добро пожаловать в SRTour</a>
                         {% endif %}
@@ -22,6 +24,7 @@
 								<ul class="dropdown-menu">
                                     <li><a href="{% url 'en_index' %}">English</a></li>
                                     <li><a href="{% url 'ru_index' %}">Русский</a></li>
+                                    <li><a href="{% url 'uz_index' %}">O'zbek</a></li>
                                     <li><a href="{% url 'ko_index' %}">한국어</a></li>
 								</ul>
 							</div>
@@ -31,6 +34,19 @@
                                     혀 : <span class="name"><span class="hidden-xs">한국어</span> <i class="fa fa-caret-down"></i></span>
                                 </button>
 								<ul class="dropdown-menu">
+                                    <li><a href="{% url 'ko_index' %}">한국어</a></li>
+                                    <li><a href="{% url 'ru_index' %}">Русский</a></li>
+                                    <li><a href="{% url 'en_index' %}">English</a></li>
+                                    <li><a href="{% url 'uz_index' %}">O'zbek</a></li>
+								</ul>
+							</div>
+                            {% elif '/uz/' in request.path %}
+                                <div class="btn-group">
+                                <button class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+                                    Til : <span class="name"><span class="hidden-xs">O'zbek</span> <i class="fa fa-caret-down"></i></span>
+                                </button>
+								<ul class="dropdown-menu">
+                                    <li><a href="{% url 'uz_index' %}">O'zbek</a></li>
                                     <li><a href="{% url 'ko_index' %}">한국어</a></li>
                                     <li><a href="{% url 'ru_index' %}">Русский</a></li>
                                     <li><a href="{% url 'en_index' %}">English</a></li>
@@ -45,6 +61,7 @@
                                     <li><a href="{% url 'ru_index' %}">Русский</a></li>
                                     <li><a href="{% url 'en_index' %}">English</a></li>
                                     <li><a href="{% url 'ko_index' %}">한국어</a></li>
+                                    <li><a href="{% url 'uz_index' %}">O'zbek</a></li>
 								</ul>
 							</div>
                             {% endif %}
